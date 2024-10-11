@@ -1,53 +1,72 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url":"data//trend.csv"},
-  "width": 600,
-  "height": 400,
-  "encoding": {
-    "x": {"field": "Year", "type": "temporal"}
-  },
-  "layer": [
-    {
-      "encoding": {
-        "color": {"field": "STATE_NAME", "type": "nominal"},
-        "y": {"field": "Number of Crash", "type": "quantitative"}
-      },
-      "layer": [
-        {"mark": "line"},
-        {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
-      ]
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "trendd.csv"
     },
-    {
-      "transform": [{"pivot": "STATE_NAME", "value": "Number of Crash", "groupby": ["Year"]}],
-      "mark": "rule",
-      "encoding": {
-        "opacity": {
-          "condition": {"value": 0.3, "param": "hover", "empty": false},
-          "value": 0
+    "vconcat": [
+      {
+        "width": 480,
+        "mark": "line",
+        "encoding": {
+          "x": {
+            "field": "YearMonth",
+            "type": "temporal",
+            "axis": {"title": "Year-Month"},
+            "scale": {"domain": {"param": "brush"}}
+          },
+          "y": {
+            "field": "Count_of_Crash",
+            "type": "quantitative",
+            "title": "Crash Count"
+          },
+          "color": {
+            "field": "STATE_NAME",
+            "type": "nominal",
+            "title": "State"
+          }
         },
-        "tooltip": [
-          {"field": "Australian Capital Territory", "type": "quantitative"},
-          {"field": "New South Wales", "type": "quantitative"},
-          {"field": "Northern Territory", "type": "quantitative"},
-          {"field": "Queensland", "type": "quantitative"},
-          {"field": "South Australia", "type": "quantitative"},
-          {"field": "Tasmania", "type": "quantitative"},
-          {"field": "Victoria", "type": "quantitative"},
-          {"field": "Western Australia", "type": "quantitative"}
+        "transform": [
+          {
+            "calculate": "toDate(datum.Year + '-' + datum.Month + '-01')",
+            "as": "YearMonth"
+          }
         ]
       },
-      "params": [
-        {
-          "name": "hover",
-          "select": {
-            "type": "point",
-            "fields": ["Year"],
-            "nearest": true,
-            "on": "pointerover",
-            "clear": "pointerout"
+      {
+        "width": 480,
+        "height": 60,
+        "mark": "line",
+        "params": [
+          {
+            "name": "brush",
+            "select": {"type": "interval", "encodings": ["x"]}
           }
-        }
-      ]
-    }
-  ]
-}
+        ],
+        "encoding": {
+          "x": {
+            "field": "YearMonth",
+            "type": "temporal",
+            "axis": {"title": "Year-Month"}
+          },
+          "y": {
+            "field": "Count_of_Crash",
+            "type": "quantitative",
+            "axis": {"tickCount": 3, "grid": false},
+            "title": null
+          },
+          "color": {
+            "field": "STATE_NAME",
+            "type": "nominal",
+            "legend": null
+          }
+        },
+        "transform": [
+          {
+            "calculate": "toDate(datum.Year + '-' + datum.Month + '-01')",
+            "as": "YearMonth"
+          }
+        ]
+      }
+    ]
+  }
+  
