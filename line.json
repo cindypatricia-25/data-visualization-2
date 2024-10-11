@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url":"data//trend.csv"},
+  "width": 600,
+  "height": 400,
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal"}
+  },
+  "layer": [
+    {
+      "encoding": {
+        "color": {"field": "STATE_NAME", "type": "nominal"},
+        "y": {"field": "Number of Crash", "type": "quantitative"}
+      },
+      "layer": [
+        {"mark": "line"},
+        {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
+      ]
+    },
+    {
+      "transform": [{"pivot": "STATE_NAME", "value": "Number of Crash", "groupby": ["Year"]}],
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": {"value": 0.3, "param": "hover", "empty": false},
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "Australian Capital Territory", "type": "quantitative"},
+          {"field": "New South Wales", "type": "quantitative"},
+          {"field": "Northern Territory", "type": "quantitative"},
+          {"field": "Queensland", "type": "quantitative"},
+          {"field": "South Australia", "type": "quantitative"},
+          {"field": "Tasmania", "type": "quantitative"},
+          {"field": "Victoria", "type": "quantitative"},
+          {"field": "Western Australia", "type": "quantitative"}
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["Year"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    }
+  ]
+}

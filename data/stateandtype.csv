@@ -1,0 +1,17 @@
+STATE_NAME,Crash Type,Count of Crash
+Australian Capital Territory,Single,271
+Australian Capital Territory,Multiple,237
+New South Wales,Single,9201
+New South Wales,Multiple,7999
+Northern Territory,Single,1350
+Northern Territory,Multiple,418
+Queensland,Single,6173
+Queensland,Multiple,5137
+South Australia,Single,2836
+South Australia,Multiple,1976
+Tasmania,Single,859
+Tasmania,Multiple,802
+Victoria,Single,6378
+Victoria,Multiple,5943
+Western Australia,Single,4299
+Western Australia,Multiple,2463

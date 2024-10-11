@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style>
+    /* Optional styling */
+    #controls {
+      margin-bottom: 10px;
+    }
+    #controls label {
+      font-size: 16px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Crash Trends by State</h2>
+
+  <!-- HTML Dropdown Filter for State -->
+  <div id="controls">
+    <label for="stateFilter">Select State: </label>
+    <select id="stateFilter">
+      <option value="New South Wales">New South Wales</option>
+      <option value="Victoria">Victoria</option>
+      <option value="Queensland">Queensland</option>
+      <option value="Western Australia">Western Australia</option>
+      <option value="South Australia">South Australia</option>
+      <option value="Tasmania">Tasmania</option>
+      <option value="Northern Territory">Northern Territory</option>
+      <option value="Australian Capital Territory">Australian Capital Territory</option>
+    </select>
+  </div>
+
+  <!-- Vega-Lite visualization container -->
+  <div id="vis"></div>
+
+  <script type="text/javascript">
+    // Function to render the line chart based on the selected state
+    function renderChart(selectedState) {
+      const spec = {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "width": 800,
+        "height": 400,
+        "title": "Crash Trend in " + selectedState,
+        "data": {
+          "url": "data//data.csv",  // The data containing the crash information
+          "format": {"type": "csv"}
+        },
+        "transform": [
+          {
+            "filter": "datum['STATE_NAME'] == " + selectedState + "'"
+          }
+        ],
+        "mark": "line",
+        "encoding": {
+          "x": {"field": "Year", "type": "temporal", "title": "Year"},
+          "y": {"field": "Count of Crash", "type": "quantitative", "title": "Crash Count"},
+          "color": {
+            "field": "Crash Type",  
+            "type": "nominal",
+            "legend": {"title": "Crash Type"}
+          },
+          "tooltip": [
+            {"field": "Year", "type": "temporal", "title": "Year"},
+            {"field": "Count of Crash", "type": "quantitative", "title": "Crash Count"},
+            {"field": "Crash Type", "type": "nominal", "title": "Crash Type"}
+          ]
+        }
+      };
+
+      // Render the Vega-Lite chart
+      vegaEmbed('#vis', spec);
+    }
+
+    // Event listener for state dropdown changes
+    document.getElementById('stateFilter').addEventListener('change', function() {
+      const selectedState = this.value;
+      renderChart(selectedState);  // Re-render the chart for the selected state
+    });
+
+    // Initial rendering of the chart with the default state ("New South Wales")
+    renderChart('New South Wales');
+  </script>
+</body>
+</html>
