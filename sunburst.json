@@ -1,0 +1,84 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A sunburst chart showing crashes by Weekday/Weekend -> Day of the Week -> Time of Day, filterable by state.",
+    "data": {
+      "url": "sunburst.csv",
+      "format": {"type": "csv"}
+    },
+    "params": [
+      {
+        "name": "state_selection",
+        "value": "Australian Capital Territory",
+        "bind": {
+          "input": "select",
+          "options": [
+            "Australian Capital Territory",
+            "New South Wales",
+            "Northern Territory",
+            "Queensland",
+            "South Australia",
+            "Tasmania",
+            "Victoria",
+            "Western Australia"
+          ],
+          "name": "Select State: "
+        }
+      }
+    ],
+    "transform": [
+      {
+        "filter": "datum.STATE_NAME == state_selection"
+      }
+    ],
+    "layer": [
+      {
+        "mark": {"type": "arc", "innerRadius": 100, "outerRadius": 200},
+        "encoding": {
+          "theta": {"field": "CrashCount", "type": "quantitative"},
+          "color": {
+            "field": "Dayweek", 
+            "type": "nominal",
+            "title": "Dayweek (Weekday/Weekend)",
+            "scale": {"scheme": "category10"}
+          },
+          "tooltip": [
+            {"field": "Dayweek", "type": "nominal", "title": "Day Category"},
+            {"field": "CrashCount", "type": "quantitative", "title": "Crash Count"}
+          ]
+        }
+      },
+      {
+        "mark": {"type": "arc", "innerRadius": 50, "outerRadius": 100},
+        "encoding": {
+          "theta": {"field": "CrashCount", "type": "quantitative"},
+          "color": {
+            "field": "Day.of.week", 
+            "type": "nominal",
+            "title": "Day of Week",
+            "scale": {"scheme": "tableau20"}
+          },
+          "tooltip": [
+            {"field": "Day.of.week", "type": "nominal", "title": "Day of Week"},
+            {"field": "CrashCount", "type": "quantitative", "title": "Crash Count"}
+          ]
+        }
+      },
+      {
+        "mark": {"type": "arc", "innerRadius": 0, "outerRadius": 50},
+        "encoding": {
+          "theta": {"field": "CrashCount", "type": "quantitative"},
+          "color": {
+            "field": "Time.of.day", 
+            "type": "nominal",
+            "title": "Time of Day",
+            "scale": {"scheme": "category20b"}
+          },
+          "tooltip": [
+            {"field": "Time.of.day", "type": "nominal", "title": "Time of Day"},
+            {"field": "CrashCount", "type": "quantitative", "title": "Crash Count"}
+          ]
+        }
+      }
+    ]
+  }
+  
