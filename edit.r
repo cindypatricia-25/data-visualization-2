@@ -42,7 +42,7 @@ formatted_data <- data %>%
 #write.csv(formatted_data, "genderage.csv", row.names = FALSE)
 
 crash_count_by_remoteness <- data %>%
-  group_by(National.Remoteness.Areas) %>%
+  group_by(STATE_NAME, National.Remoteness.Areas) %>%
   summarise(CrashCount = n())
 
 # Print the result
@@ -64,3 +64,11 @@ heavy_involve <- data %>%
   summarise(CrashCount = n())
 
   print(heavy_involve)
+
+remoteness <- data %>%
+  group_by(STATE_NAME, National.Remoteness.Areas) %>%
+  summarise(CountCrash = n())
+
+print(remoteness)
+
+write.csv(remoteness, "remoteness.csv", row.names = FALSE)

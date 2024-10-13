@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A heatmap showing crash counts by remoteness category and state.",
+    "data": {
+      "values": [
+        {"State": "NSW", "Remoteness": "Major Cities", "CrashCount": 500},
+        {"State": "NSW", "Remoteness": "Inner Regional", "CrashCount": 300},
+        {"State": "NSW", "Remoteness": "Outer Regional", "CrashCount": 150},
+        {"State": "VIC", "Remoteness": "Major Cities", "CrashCount": 400},
+        {"State": "VIC", "Remoteness": "Inner Regional", "CrashCount": 250},
+        {"State": "VIC", "Remoteness": "Outer Regional", "CrashCount": 100},
+        {"State": "QLD", "Remoteness": "Major Cities", "CrashCount": 350},
+        {"State": "QLD", "Remoteness": "Inner Regional", "CrashCount": 200},
+        {"State": "QLD", "Remoteness": "Remote", "CrashCount": 50},
+        {"State": "WA", "Remoteness": "Major Cities", "CrashCount": 450},
+        {"State": "WA", "Remoteness": "Remote", "CrashCount": 300},
+        {"State": "SA", "Remoteness": "Remote", "CrashCount": 250},
+        {"State": "SA", "Remoteness": "Very Remote", "CrashCount": 100}
+      ]
+    },
+    "mark": "rect",
+    "encoding": {
+      "x": {"field": "State", "type": "nominal", "axis": {"labelAngle": 0}},
+      "y": {"field": "Remoteness", "type": "nominal"},
+      "color": {
+        "field": "CrashCount",
+        "type": "quantitative",
+        "scale": {"scheme": "reds"},
+        "legend": {"title": "Crash Count"}
+      },
+      "tooltip": [
+        {"field": "State", "type": "nominal", "title": "State"},
+        {"field": "Remoteness", "type": "nominal", "title": "Remoteness"},
+        {"field": "CrashCount", "type": "quantitative", "title": "Crash Count"}
+      ]
+    },
+    "config": {
+      "view": {"stroke": null},
+      "axis": {"grid": false}
+    }
+  }
+  
