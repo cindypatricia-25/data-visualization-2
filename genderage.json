@@ -1,0 +1,82 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Crash data pyramid using Gender and Age.Group.",
+    "data": {
+      "url": "data//genderage.csv"  
+    },
+    "spacing": 0,
+    "hconcat": [
+      {
+        "transform": [
+          {"filter": {"field": "Gender", "equal": "Female"}}
+        ],
+        "title": "Female",
+        "mark": "bar",
+        "encoding": {
+          "y": {
+            "field": "AgeGroup",
+            "axis": null,
+            "sort": ["0_to_16", "17_to_25", "26_to_39", "40_to_64", "65_to_74", "75+"]
+          },
+          "x": {
+            "aggregate": "sum",
+            "field": "CrashCount",
+            "title": "Crash Count",
+            "axis": {"format": "s"},
+            "sort": "descending",
+            "scale": {"domain": [0, 1200]}
+          },
+          "color": {
+          "value": "#ffabec"  
+            }
+        }
+      },
+      {
+        "width": 20,
+        "view": {"stroke": null},
+        "mark": {
+          "type": "text",
+          "align": "center"
+        },
+        "encoding": {
+          "y": {
+            "field": "AgeGroup",
+            "type": "ordinal",
+            "axis": null,
+            "sort": ["0_to_16", "17_to_25", "26_to_39", "40_to_64", "65_to_74", "75_or_older"]
+          },
+          "text": {"field": "AgeGroup", "type": "nominal"}
+        }
+      },
+      {
+        "transform": [
+          {"filter": {"field": "Gender", "equal": "Male"}}
+        ],
+        "title": "Male",
+        "mark": "bar",
+        "encoding": {
+          "y": {
+            "field": "AgeGroup",
+            "title": null,
+            "axis": null,
+            "sort": ["0_to_16", "17_to_25", "26_to_39", "40_to_64", "65_to_74", "75_or_older"]
+          },
+          "x": {
+            "aggregate": "sum",
+            "field": "CrashCount",
+            "title": "Crash Count",
+            "axis": {"format": "s"},
+            "scale": {"domain": [0, 1200]}
+          },
+          "color": {
+            "value": "#abcfff"  
+                  } 
+        }
+      }
+    ],
+    "config": {
+      "view": {"stroke": null},
+      "axis": {"grid": false}
+    }
+  }
+  

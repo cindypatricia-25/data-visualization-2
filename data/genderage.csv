@@ -1,0 +1,13 @@
+AgeGroup,Gender,CrashCount
+0_to_16,Female,88
+0_to_16,Male,170
+17_to_25,Female,226
+17_to_25,Male,802
+26_to_39,Female,254
+26_to_39,Male,949
+40_to_64,Female,356
+40_to_64,Male,1264
+65_to_74,Female,145
+65_to_74,Male,362
+75_or_older,Female,252
+75_or_older,Male,423

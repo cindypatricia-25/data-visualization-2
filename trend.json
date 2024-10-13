@@ -1,12 +1,20 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-      "url": "trendd.csv"
+      "url": "data//trend.csv"
     },
     "vconcat": [
       {
         "width": 480,
-        "mark": "line",
+        "mark": {
+          "type": "line",
+            "point": true
+        },
+        "params": [{
+    "name": "legendselect",
+    "select": {"type": "point", "fields": ["STATE_NAME"]},
+    "bind": "legend"
+  }],
         "encoding": {
           "x": {
             "field": "YearMonth",
@@ -22,8 +30,13 @@
           "color": {
             "field": "STATE_NAME",
             "type": "nominal",
-            "title": "State"
-          }
+            "title": "State",
+            "legend": {"title": "State"} 
+          },
+          "opacity": {
+      "condition": {"param": "legendselect", "value": 1},
+      "value": 0.2
+    }
         },
         "transform": [
           {
@@ -58,7 +71,11 @@
             "field": "STATE_NAME",
             "type": "nominal",
             "legend": null
-          }
+          },
+          "opacity": {
+      "condition": {"param": "legendselect", "value": 1},
+      "value": 0.2
+    }
         },
         "transform": [
           {

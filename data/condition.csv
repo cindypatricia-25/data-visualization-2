@@ -1,0 +1,15 @@
+﻿Type ,CrashCount,Condition
+Pedestrian,"7,020",Hospitalized
+Pedal Cycle,"29,587",Hospitalized
+Motorcycle,"29,729",Hospitalized
+Car,"38,094",Hospitalized
+Heavy transport vehicle,"2,968",Hospitalized
+Other land transport,"2,866",Hospitalized
+Other   ,"3,417",Hospitalized
+Pedestrian,344,Death
+Pedal Cycle,72,Death
+Motorcycle,496,Death
+Car,1472,Death
+Heavy transport vehicle,84,Death
+Other land transport,152,Death
+Other   ,168,Death

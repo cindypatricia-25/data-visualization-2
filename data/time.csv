@@ -1,0 +1,112 @@
+STATE_NAME,time,Dayweek,CrashCount
+Australian Capital Territory,Day,Friday,2
+Australian Capital Territory,Day,Monday,3
+Australian Capital Territory,Day,Saturday,5
+Australian Capital Territory,Day,Sunday,6
+Australian Capital Territory,Day,Tuesday,3
+Australian Capital Territory,Day,Wednesday,1
+Australian Capital Territory,Night,Friday,2
+Australian Capital Territory,Night,Monday,1
+Australian Capital Territory,Night,Saturday,3
+Australian Capital Territory,Night,Sunday,3
+Australian Capital Territory,Night,Thursday,2
+Australian Capital Territory,Night,Tuesday,1
+Australian Capital Territory,Night,Wednesday,2
+New South Wales,Day,Friday,134
+New South Wales,Day,Monday,109
+New South Wales,Day,Saturday,163
+New South Wales,Day,Sunday,131
+New South Wales,Day,Thursday,131
+New South Wales,Day,Tuesday,141
+New South Wales,Day,Wednesday,144
+New South Wales,Night,Friday,93
+New South Wales,Night,Monday,63
+New South Wales,Night,Saturday,123
+New South Wales,Night,Sunday,95
+New South Wales,Night,Thursday,84
+New South Wales,Night,Tuesday,70
+New South Wales,Night,Wednesday,56
+Northern Territory,Day,Friday,11
+Northern Territory,Day,Monday,11
+Northern Territory,Day,Saturday,12
+Northern Territory,Day,Sunday,10
+Northern Territory,Day,Thursday,11
+Northern Territory,Day,Tuesday,3
+Northern Territory,Day,Wednesday,3
+Northern Territory,Night,Friday,21
+Northern Territory,Night,Monday,6
+Northern Territory,Night,Saturday,20
+Northern Territory,Night,Sunday,7
+Northern Territory,Night,Thursday,14
+Northern Territory,Night,Tuesday,14
+Northern Territory,Night,Wednesday,13
+Queensland,Day,Friday,130
+Queensland,Day,Monday,121
+Queensland,Day,Saturday,106
+Queensland,Day,Sunday,133
+Queensland,Day,Thursday,98
+Queensland,Day,Tuesday,98
+Queensland,Day,Wednesday,102
+Queensland,Night,Friday,102
+Queensland,Night,Monday,55
+Queensland,Night,Saturday,98
+Queensland,Night,Sunday,102
+Queensland,Night,Thursday,62
+Queensland,Night,Tuesday,49
+Queensland,Night,Wednesday,72
+South Australia,Day,Friday,42
+South Australia,Day,Monday,35
+South Australia,Day,Saturday,57
+South Australia,Day,Sunday,41
+South Australia,Day,Thursday,46
+South Australia,Day,Tuesday,43
+South Australia,Day,Wednesday,45
+South Australia,Night,Friday,34
+South Australia,Night,Monday,12
+South Australia,Night,Saturday,42
+South Australia,Night,Sunday,25
+South Australia,Night,Thursday,21
+South Australia,Night,Tuesday,25
+South Australia,Night,Wednesday,24
+Tasmania,Day,Friday,20
+Tasmania,Day,Monday,14
+Tasmania,Day,Saturday,18
+Tasmania,Day,Sunday,10
+Tasmania,Day,Thursday,18
+Tasmania,Day,Tuesday,18
+Tasmania,Day,Wednesday,6
+Tasmania,Night,Friday,17
+Tasmania,Night,Monday,9
+Tasmania,Night,Saturday,10
+Tasmania,Night,Sunday,12
+Tasmania,Night,Thursday,15
+Tasmania,Night,Tuesday,8
+Tasmania,Night,Wednesday,11
+Victoria,Day,Friday,89
+Victoria,Day,Monday,63
+Victoria,Day,Saturday,87
+Victoria,Day,Sunday,73
+Victoria,Day,Thursday,97
+Victoria,Day,Tuesday,73
+Victoria,Day,Wednesday,70
+Victoria,Night,Friday,85
+Victoria,Night,Monday,69
+Victoria,Night,Saturday,94
+Victoria,Night,Sunday,97
+Victoria,Night,Thursday,95
+Victoria,Night,Tuesday,63
+Victoria,Night,Wednesday,65
+Western Australia,Day,Friday,44
+Western Australia,Day,Monday,24
+Western Australia,Day,Saturday,46
+Western Australia,Day,Sunday,42
+Western Australia,Day,Thursday,41
+Western Australia,Day,Tuesday,36
+Western Australia,Day,Wednesday,44
+Western Australia,Night,Friday,31
+Western Australia,Night,Monday,8
+Western Australia,Night,Saturday,34
+Western Australia,Night,Sunday,27
+Western Australia,Night,Thursday,21
+Western Australia,Night,Tuesday,17
+Western Australia,Night,Wednesday,23

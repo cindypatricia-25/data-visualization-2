@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data//time.csv"},
+  "params": [
+    {
+      "name": "StateSelector",
+      "value": "All States",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All States",
+          "Australian Capital Territory", "New South Wales", "Northern Territory", 
+          "Queensland", "South Australia", "Tasmania", "Victoria", "Western Australia"
+        ],
+        "name": "State: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "StateSelector == 'All States' || datum.STATE_NAME == StateSelector"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Dayweek",
+      "type": "ordinal",
+      "title": "Day of the Week",
+      "sort": [
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"  
+      ]
+    },
+    "y": {
+      "field": "CrashCount",
+      "aggregate": "sum",
+      "type": "quantitative",
+      "title": "Crash Count"
+    },
+    "color": {
+      "field": "time",
+      "type": "nominal",
+      "title": "Time of Day",
+      "scale": {
+        "domain": ["Day", "Night"],
+        "range": ["#fff3ac", "#97e1ff"]  
+      }
+    },
+    "tooltip": [
+      {"field": "Dayweek", "type": "ordinal", "title": "Day of the Week"},
+      {"field": "time", "type": "nominal", "title": "Time of Day"},
+      {"field": "CrashCount", "type": "quantitative", "title": "Crash Count"}
+    ]
+  }
+}
