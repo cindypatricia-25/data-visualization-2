@@ -1,0 +1,75 @@
+STATE_NAME,SpeedLimit,CountCrash
+Australian Capital Territory,100,3
+Australian Capital Territory,50,4
+Australian Capital Territory,60,9
+Australian Capital Territory,70,1
+Australian Capital Territory,80,17
+New South Wales,10,1
+New South Wales,100,510
+New South Wales,110,131
+New South Wales,20,1
+New South Wales,40,28
+New South Wales,50,258
+New South Wales,60,250
+New South Wales,70,94
+New South Wales,80,240
+New South Wales,90,24
+Northern Territory,100,28
+Northern Territory,110,34
+Northern Territory,130,31
+Northern Territory,40,2
+Northern Territory,50,9
+Northern Territory,60,12
+Northern Territory,70,12
+Northern Territory,80,24
+Northern Territory,90,4
+Queensland,10,2
+Queensland,100,560
+Queensland,110,54
+Queensland,20,3
+Queensland,30,1
+Queensland,40,15
+Queensland,5,2
+Queensland,50,107
+Queensland,60,284
+Queensland,70,93
+Queensland,80,194
+Queensland,90,13
+South Australia,10,9
+South Australia,100,114
+South Australia,110,126
+South Australia,20,1
+South Australia,25,2
+South Australia,40,5
+South Australia,50,53
+South Australia,60,91
+South Australia,70,9
+South Australia,80,76
+South Australia,90,6
+Tasmania,100,71
+Tasmania,110,27
+Tasmania,40,1
+Tasmania,50,32
+Tasmania,60,16
+Tasmania,70,4
+Tasmania,80,29
+Tasmania,90,4
+Tasmania,<40,2
+Victoria,100,446
+Victoria,110,35
+Victoria,30,2
+Victoria,40,20
+Victoria,50,120
+Victoria,60,241
+Victoria,70,53
+Victoria,80,195
+Victoria,90,8
+Western Australia,100,39
+Western Australia,110,191
+Western Australia,20,1
+Western Australia,40,2
+Western Australia,50,48
+Western Australia,60,56
+Western Australia,70,24
+Western Australia,80,52
+Western Australia,90,25

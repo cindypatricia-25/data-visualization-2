@@ -1,49 +1,49 @@
-"STATE_NAME","National.Road.Type","CountCrash"
-"Australian Capital Territory","Access road",1
-"Australian Capital Territory","Arterial Road",12
-"Australian Capital Territory","Collector Road",8
-"Australian Capital Territory","Local Road",9
-"Australian Capital Territory","National or State Highway",4
-"New South Wales","Access road",20
-"New South Wales","Arterial Road",446
-"New South Wales","Busway",2
-"New South Wales","Collector Road",125
-"New South Wales","Local Road",294
-"New South Wales","National or State Highway",460
-"New South Wales","Pedestrian Thoroughfare",1
-"New South Wales","Sub-arterial Road",189
-"Northern Territory","Access road",11
-"Northern Territory","Arterial Road",41
-"Northern Territory","Collector Road",4
-"Northern Territory","Local Road",11
-"Northern Territory","National or State Highway",37
-"Northern Territory","Sub-arterial Road",52
-"Queensland","Access road",17
-"Queensland","Busway",2
-"Queensland","Collector Road",139
-"Queensland","Local Road",326
-"Queensland","National or State Highway",455
-"Queensland","Pedestrian Thoroughfare",2
-"Queensland","Sub-arterial Road",387
-"South Australia","Access road",5
-"South Australia","Arterial Road",110
-"South Australia","Collector Road",58
-"South Australia","Local Road",82
-"South Australia","National or State Highway",110
-"South Australia","Sub-arterial Road",127
-"Tasmania","Access road",5
-"Tasmania","Arterial Road",30
-"Tasmania","Collector Road",19
-"Tasmania","Local Road",34
-"Tasmania","National or State Highway",75
-"Tasmania","Sub-arterial Road",23
-"Victoria","Access road",20
-"Victoria","Arterial Road",301
-"Victoria","Collector Road",55
-"Victoria","Local Road",246
-"Victoria","National or State Highway",318
-"Victoria","Pedestrian Thoroughfare",2
-"Victoria","Sub-arterial Road",178
-"Western Australia","Arterial Road",149
-"Western Australia","Local Road",151
-"Western Australia","National or State Highway",138
+STATE_NAME,RoadType,CountCrash
+Australian Capital Territory,Access road,1
+Australian Capital Territory,Arterial Road,12
+Australian Capital Territory,Collector Road,8
+Australian Capital Territory,Local Road,9
+Australian Capital Territory,National or State Highway,4
+New South Wales,Access road,20
+New South Wales,Arterial Road,446
+New South Wales,Busway,2
+New South Wales,Collector Road,125
+New South Wales,Local Road,294
+New South Wales,National or State Highway,460
+New South Wales,Pedestrian Thoroughfare,1
+New South Wales,Sub-arterial Road,189
+Northern Territory,Access road,11
+Northern Territory,Arterial Road,41
+Northern Territory,Collector Road,4
+Northern Territory,Local Road,11
+Northern Territory,National or State Highway,37
+Northern Territory,Sub-arterial Road,52
+Queensland,Access road,17
+Queensland,Busway,2
+Queensland,Collector Road,139
+Queensland,Local Road,326
+Queensland,National or State Highway,455
+Queensland,Pedestrian Thoroughfare,2
+Queensland,Sub-arterial Road,387
+South Australia,Access road,5
+South Australia,Arterial Road,110
+South Australia,Collector Road,58
+South Australia,Local Road,82
+South Australia,National or State Highway,110
+South Australia,Sub-arterial Road,127
+Tasmania,Access road,5
+Tasmania,Arterial Road,30
+Tasmania,Collector Road,19
+Tasmania,Local Road,34
+Tasmania,National or State Highway,75
+Tasmania,Sub-arterial Road,23
+Victoria,Access road,20
+Victoria,Arterial Road,301
+Victoria,Collector Road,55
+Victoria,Local Road,246
+Victoria,National or State Highway,318
+Victoria,Pedestrian Thoroughfare,2
+Victoria,Sub-arterial Road,178
+Western Australia,Arterial Road,149
+Western Australia,Local Road,151
+Western Australia,National or State Highway,138

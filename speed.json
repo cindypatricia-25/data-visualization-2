@@ -1,0 +1,93 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "title": "Crash Count per Speed Limit by State (2019-2023)",
+    "data": {
+      "url": "speedtime.csv"  
+    },
+    "params": [
+      {
+        "name": "YearSelection",
+        "value": 2019,
+        "bind": {
+          "input": "range",
+          "min": 2019,
+          "max": 2023,
+          "step": 1,
+          "name": "Year: "
+        }
+      },
+      {
+        "name": "StateSelection",
+        "value": "All",
+        "bind": {
+          "input": "select",
+          "options": ["All", "Australian Capital Territory", "New South Wales", "Northern Territory", "Queensland", "South Australia", "Tasmania", "Victoria", "Western Australia"],
+          "name": "State: "
+        }
+      }
+    ],
+    "transform": [
+      {
+        "filter": "(StateSelection == 'All' || datum.STATE_NAME == StateSelection) && datum.Year == YearSelection"
+      }
+    ],
+    "mark": {
+      "type": "circle",
+      "tooltip": true
+    },
+    "encoding": {
+      "x": {
+        "field": "SpeedLimit",
+        "type": "quantitative",
+        "title": "Speed Limit (km/h)"
+      },
+      "y": {
+        "field": "CountCrash",
+        "type": "quantitative",
+        "title": "Crash Count"
+      },
+      "size": {
+        "field": "CountCrash",
+        "type": "quantitative",
+        "scale": {
+          "range": [20, 500]
+        }
+      },
+      "color": {
+        "field": "STATE_NAME",
+        "type": "nominal",
+        "legend": {"title": "State"},
+        "scale": {
+          "domain": [
+            "Australian Capital Territory", 
+            "New South Wales", 
+            "Northern Territory", 
+            "Queensland", 
+            "South Australia", 
+            "Tasmania", 
+            "Victoria", 
+            "Western Australia"
+          ],
+          "range": [
+            "#1f77b4",  
+            "#ff7f0e",  
+            "#2ca02c",  
+            "#d62728", 
+            "#9467bd",  
+            "#8c564b",  
+            "#e377c2",  
+            "#7f7f7f"   
+          ]
+        }
+      },
+      "tooltip": [
+        {"field": "Year", "type": "quantitative", "title": "Year"},
+        {"field": "STATE_NAME", "type": "nominal", "title": "State"},
+        {"field": "SpeedLimit", "type": "quantitative", "title": "Speed Limit"},
+        {"field": "CountCrash", "type": "quantitative", "title": "Crash Count"}
+      ]
+    }
+  }
+  

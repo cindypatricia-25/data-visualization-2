@@ -1,0 +1,284 @@
+Year,STATE_NAME,SpeedLimit,CountCrash
+2019,Australian Capital Territory,100,1
+2019,Australian Capital Territory,50,1
+2019,Australian Capital Territory,60,2
+2019,Australian Capital Territory,80,1
+2019,New South Wales,100,113
+2019,New South Wales,110,41
+2019,New South Wales,40,7
+2019,New South Wales,50,51
+2019,New South Wales,60,53
+2019,New South Wales,70,16
+2019,New South Wales,80,63
+2019,New South Wales,90,9
+2019,Northern Territory,100,7
+2019,Northern Territory,110,6
+2019,Northern Territory,130,9
+2019,Northern Territory,50,2
+2019,Northern Territory,60,3
+2019,Northern Territory,70,2
+2019,Northern Territory,80,7
+2019,Queensland,100,111
+2019,Queensland,110,7
+2019,Queensland,40,1
+2019,Queensland,50,11
+2019,Queensland,60,40
+2019,Queensland,70,11
+2019,Queensland,80,35
+2019,Queensland,90,2
+2019,South Australia,10,4
+2019,South Australia,100,22
+2019,South Australia,110,40
+2019,South Australia,25,1
+2019,South Australia,40,1
+2019,South Australia,50,12
+2019,South Australia,60,17
+2019,South Australia,70,5
+2019,South Australia,80,11
+2019,South Australia,90,1
+2019,Tasmania,100,11
+2019,Tasmania,110,4
+2019,Tasmania,50,6
+2019,Tasmania,60,3
+2019,Tasmania,80,5
+2019,Victoria,100,103
+2019,Victoria,110,8
+2019,Victoria,40,3
+2019,Victoria,50,33
+2019,Victoria,60,53
+2019,Victoria,70,9
+2019,Victoria,80,47
+2019,Victoria,90,2
+2019,Western Australia,100,14
+2019,Western Australia,110,61
+2019,Western Australia,20,1
+2019,Western Australia,40,1
+2019,Western Australia,50,16
+2019,Western Australia,60,23
+2019,Western Australia,70,5
+2019,Western Australia,80,15
+2019,Western Australia,90,9
+2020,Australian Capital Territory,100,1
+2020,Australian Capital Territory,70,1
+2020,Australian Capital Territory,80,3
+2020,New South Wales,100,105
+2020,New South Wales,110,14
+2020,New South Wales,40,8
+2020,New South Wales,50,49
+2020,New South Wales,60,42
+2020,New South Wales,70,20
+2020,New South Wales,80,40
+2020,New South Wales,90,6
+2020,Northern Territory,100,6
+2020,Northern Territory,110,6
+2020,Northern Territory,130,6
+2020,Northern Territory,50,1
+2020,Northern Territory,60,4
+2020,Northern Territory,70,3
+2020,Northern Territory,80,4
+2020,Queensland,10,1
+2020,Queensland,100,108
+2020,Queensland,110,6
+2020,Queensland,40,1
+2020,Queensland,50,24
+2020,Queensland,60,54
+2020,Queensland,70,21
+2020,Queensland,80,54
+2020,Queensland,90,3
+2020,South Australia,100,27
+2020,South Australia,110,21
+2020,South Australia,40,1
+2020,South Australia,50,9
+2020,South Australia,60,15
+2020,South Australia,80,17
+2020,South Australia,90,3
+2020,Tasmania,100,13
+2020,Tasmania,110,8
+2020,Tasmania,50,7
+2020,Tasmania,60,2
+2020,Tasmania,70,1
+2020,Tasmania,80,3
+2020,Tasmania,90,2
+2020,Victoria,100,88
+2020,Victoria,110,7
+2020,Victoria,30,1
+2020,Victoria,40,4
+2020,Victoria,50,24
+2020,Victoria,60,47
+2020,Victoria,70,8
+2020,Victoria,80,25
+2020,Western Australia,100,12
+2020,Western Australia,110,65
+2020,Western Australia,50,14
+2020,Western Australia,60,13
+2020,Western Australia,70,9
+2020,Western Australia,80,21
+2020,Western Australia,90,10
+2021,Australian Capital Territory,100,1
+2021,Australian Capital Territory,50,1
+2021,Australian Capital Territory,60,1
+2021,Australian Capital Territory,80,2
+2021,New South Wales,100,92
+2021,New South Wales,110,25
+2021,New South Wales,40,3
+2021,New South Wales,50,52
+2021,New South Wales,60,43
+2021,New South Wales,70,20
+2021,New South Wales,80,38
+2021,New South Wales,90,2
+2021,Northern Territory,100,4
+2021,Northern Territory,110,8
+2021,Northern Territory,130,4
+2021,Northern Territory,40,1
+2021,Northern Territory,50,4
+2021,Northern Territory,60,3
+2021,Northern Territory,70,2
+2021,Northern Territory,80,5
+2021,Northern Territory,90,2
+2021,Queensland,100,117
+2021,Queensland,110,17
+2021,Queensland,30,1
+2021,Queensland,40,2
+2021,Queensland,5,1
+2021,Queensland,50,22
+2021,Queensland,60,53
+2021,Queensland,70,26
+2021,Queensland,80,30
+2021,Queensland,90,3
+2021,South Australia,10,1
+2021,South Australia,100,23
+2021,South Australia,110,26
+2021,South Australia,40,1
+2021,South Australia,50,8
+2021,South Australia,60,18
+2021,South Australia,70,1
+2021,South Australia,80,19
+2021,Tasmania,100,15
+2021,Tasmania,110,5
+2021,Tasmania,50,9
+2021,Tasmania,60,2
+2021,Tasmania,80,4
+2021,Victoria,100,92
+2021,Victoria,110,4
+2021,Victoria,40,6
+2021,Victoria,50,16
+2021,Victoria,60,55
+2021,Victoria,70,10
+2021,Victoria,80,35
+2021,Victoria,90,4
+2021,Western Australia,100,13
+2021,Western Australia,110,65
+2021,Western Australia,40,1
+2021,Western Australia,50,18
+2021,Western Australia,60,20
+2021,Western Australia,70,10
+2021,Western Australia,80,16
+2021,Western Australia,90,6
+2022,Australian Capital Territory,50,2
+2022,Australian Capital Territory,60,6
+2022,Australian Capital Territory,80,8
+2022,New South Wales,100,100
+2022,New South Wales,110,22
+2022,New South Wales,40,4
+2022,New South Wales,50,37
+2022,New South Wales,60,52
+2022,New South Wales,70,21
+2022,New South Wales,80,41
+2022,New South Wales,90,3
+2022,Northern Territory,100,6
+2022,Northern Territory,110,10
+2022,Northern Territory,130,9
+2022,Northern Territory,50,1
+2022,Northern Territory,60,2
+2022,Northern Territory,70,4
+2022,Northern Territory,80,8
+2022,Northern Territory,90,2
+2022,Queensland,100,115
+2022,Queensland,110,6
+2022,Queensland,20,1
+2022,Queensland,40,4
+2022,Queensland,50,25
+2022,Queensland,60,84
+2022,Queensland,70,22
+2022,Queensland,80,33
+2022,Queensland,90,4
+2022,South Australia,100,19
+2022,South Australia,110,14
+2022,South Australia,50,7
+2022,South Australia,60,16
+2022,South Australia,70,2
+2022,South Australia,80,12
+2022,South Australia,90,1
+2022,Tasmania,100,18
+2022,Tasmania,110,6
+2022,Tasmania,40,1
+2022,Tasmania,50,6
+2022,Tasmania,60,7
+2022,Tasmania,70,1
+2022,Tasmania,80,10
+2022,Tasmania,90,1
+2022,Tasmania,<40,1
+2022,Victoria,100,83
+2022,Victoria,110,4
+2022,Victoria,40,5
+2022,Victoria,50,22
+2022,Victoria,60,42
+2022,Victoria,70,16
+2022,Victoria,80,41
+2022,Victoria,90,1
+2023,Australian Capital Territory,80,3
+2023,New South Wales,10,1
+2023,New South Wales,100,100
+2023,New South Wales,110,29
+2023,New South Wales,20,1
+2023,New South Wales,40,6
+2023,New South Wales,50,69
+2023,New South Wales,60,60
+2023,New South Wales,70,17
+2023,New South Wales,80,58
+2023,New South Wales,90,4
+2023,Northern Territory,100,5
+2023,Northern Territory,110,4
+2023,Northern Territory,130,3
+2023,Northern Territory,40,1
+2023,Northern Territory,50,1
+2023,Northern Territory,70,1
+2023,Queensland,10,1
+2023,Queensland,100,109
+2023,Queensland,110,18
+2023,Queensland,20,2
+2023,Queensland,40,7
+2023,Queensland,5,1
+2023,Queensland,50,25
+2023,Queensland,60,53
+2023,Queensland,70,13
+2023,Queensland,80,42
+2023,Queensland,90,1
+2023,South Australia,10,4
+2023,South Australia,100,23
+2023,South Australia,110,25
+2023,South Australia,20,1
+2023,South Australia,25,1
+2023,South Australia,40,2
+2023,South Australia,50,17
+2023,South Australia,60,25
+2023,South Australia,70,1
+2023,South Australia,80,17
+2023,South Australia,90,1
+2023,Tasmania,100,14
+2023,Tasmania,110,4
+2023,Tasmania,50,4
+2023,Tasmania,60,2
+2023,Tasmania,70,2
+2023,Tasmania,80,7
+2023,Tasmania,90,1
+2023,Tasmania,<40,1
+2023,Victoria,100,80
+2023,Victoria,110,12
+2023,Victoria,30,1
+2023,Victoria,40,2
+2023,Victoria,50,25
+2023,Victoria,60,44
+2023,Victoria,70,10
+2023,Victoria,80,47
+2023,Victoria,90,1

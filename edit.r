@@ -77,6 +77,27 @@ roadtype <- data %>%
   group_by(STATE_NAME, National.Road.Type) %>%
   summarise(CountCrash = n())
 
-print(roadtype)
+#print(roadtype)
 
-write.csv(roadtype, "roadtype.csv", row.names = FALSE)
+#write.csv(roadtype, "roadtype.csv", row.names = FALSE)
+
+easter <- data %>% 
+  group_by(Easter.Period) %>%
+    summarise(CrashCount = n())
+
+
+christmas <- data %>% 
+  group_by(Christmas.Period) %>%
+    summarise(CrashCount = n())
+
+print(easter)
+print(christmas)
+
+speed <- data %>%
+  group_by(Year, STATE_NAME, Speed.Limit) %>%
+  summarise(CountCrash = n())
+
+
+print(speed)
+
+write.csv(speed, "speedtime.csv", row.names = FALSE)

@@ -1,0 +1,71 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "values": [
+        {"Category": "Easter Period", "Condition": "No", "CrashCount": 5207},
+        {"Category": "Easter Period", "Condition": "Yes", "CrashCount": 84},
+        {"Category": "Christmas Period", "Condition": "No", "CrashCount": 5141},
+        {"Category": "Christmas Period", "Condition": "Yes", "CrashCount": 150}
+      ]
+    },
+    "transform": [
+      {
+        "joinaggregate": [
+          {"op": "sum", "field": "CrashCount", "as": "TotalCrashCount"}
+        ],
+        "groupby": ["Category"]
+      },
+      {
+        "calculate": "datum.TotalCrashCount / 2",
+        "as": "HalfTotalCrashCount"
+      }
+    ],
+    "layer": [
+      {
+        "mark": {"type": "arc", "innerRadius": 50, "outerRadius": 100},
+        "encoding": {
+          "theta": {
+            "field": "HalfTotalCrashCount",
+            "type": "quantitative"
+          },
+          "color": {
+            "field": "Category",
+            "type": "nominal",
+            "legend": {
+              "title": "Involvement Type", 
+              "orient" : "right",
+            "offset": 50},
+            "scale": {"scheme": "set3"}
+          },
+          "tooltip": [
+            {"field": "Category", "type": "nominal", "title": "Involvement Type"},
+            {"field": "TotalCrashCount", "type": "quantitative", "title": "Total Crashes"}
+          ]
+        }
+      },
+      {
+        "mark": {"type": "arc", "innerRadius": 100, "outerRadius": 150},
+        "encoding": {
+          "theta": {
+            "field": "CrashCount",
+            "type": "quantitative"
+          },
+          "color": {
+            "field": "Condition",
+            "type": "nominal",
+            "legend": {"title": "Yes/No Condition"},
+            "scale": {"scheme": "goldgreen"}
+          },
+          "order": {"field": "Category", "type": "nominal"},
+          "tooltip": [
+            {"field": "Category", "type": "nominal", "title": "Involvement Type"},
+            {"field": "Condition", "type": "nominal", "title": "Yes/No Condition"},
+            {"field": "CrashCount", "type": "quantitative", "title": "Crash Count"}
+          ]
+        }
+      }
+    ],
+    "view": {"stroke": null}
+  }
+  
+  

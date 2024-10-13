@@ -4,7 +4,7 @@
   "width": 400,
   "height": 400,
 
-  "padding": {"left": 60, "right": 150, "top": 40, "bottom": 40},
+  "padding": {"left": 100, "right": 150, "top": 40, "bottom": 40},
 
   "autosize": {"type": "none", "contains": "padding"},
 
@@ -24,12 +24,19 @@
         {"key": "Other land transport", "value": 3.4573, "category": "hospitalized"},
         {"key": "Other", "value": 3.5336, "category": "hospitalized"},
         {"key": "Pedestrian", "value": 2.5365, "category": "death"},
-        {"key": "Pedal cycle", "value": 1.8573, "category": "death"},
+        {"key": "Pedal Cycle", "value": 1.8573, "category": "death"},
         {"key": "Motorcycle", "value": 2.6955, "category": "death"},
         {"key": "Car", "value": 3.1679, "category": "death"},
         {"key": "Heavy transport vehicle", "value": 1.9243, "category": "death"},
         {"key": "Other land transport", "value": 2.1818, "category": "death"},
         {"key": "Other", "value": 2.2253, "category": "death"}
+      ],
+      "transform": [
+        {
+          "type": "formula",
+          "as": "key",
+          "expr": "upper(datum.key)"  
+        }
       ]
     },
     {
@@ -157,7 +164,7 @@
         },
         "hover": {
           "tooltip": {
-            "signal": "datum.key == 'Pedestrian' ? {'Vehicle Type': 'Pedestrian', 'Hospitalized': 7020, 'Deaths': 344} : datum.key == 'Pedal Cycle' ? {'Vehicle Type': 'Pedal Cycle', 'Hospitalized': 29587, 'Deaths': 72} : datum.key == 'Motorcycle' ? {'Vehicle Type': 'Motorcycle', 'Hospitalized': 29729, 'Deaths': 496} : datum.key == 'Car' ? {'Vehicle Type': 'Car', 'Hospitalized': 38094, 'Deaths': 1472} : datum.key == 'Other land transport' ? {'Vehicle Type': 'Other land transport', 'Hospitalized': 2866, 'Deaths': 152} : datum.key == 'Other' ? {'Vehicle Type': 'Other', 'Hospitalized': 3417, 'Deaths': 168} : {}"
+            "signal": "datum.key == 'PEDESTRIAN' ? {'Vehicle Type': 'Pedestrian', 'Hospitalized': 7020, 'Deaths': 344} : datum.key == 'PEDAL CYCLE' ? {'Vehicle Type': 'Pedal Cycle', 'Hospitalized': 29587, 'Deaths': 72} : datum.key == 'MOTORCYCLE' ? {'Vehicle Type': 'Motorcycle', 'Hospitalized': 29729, 'Deaths': 496} : datum.key == 'CAR' ? {'Vehicle Type': 'Car', 'Hospitalized': 38094, 'Deaths': 1472} : datum.key == 'OTHER LAND TRANSPORT' ? {'Vehicle Type': 'Other land transport', 'Hospitalized': 2866, 'Deaths': 152} : datum.key == 'OTHER' ? {'Vehicle Type': 'Other', 'Hospitalized': 3417, 'Deaths': 168} : datum.key == 'HEAVY TRANSPORT VEHICLE' ? {'Vehicle Type': 'Heavy transport vehicle', 'Hospitalized': 2866, 'Deaths': 84} : {}"
           }
         }
       }
