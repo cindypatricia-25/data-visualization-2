@@ -1,70 +1,180 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A mosaic chart showing crash count distribution by vehicle type and condition.",
-    "width": 600,
-    "height": 400,
-    "data": {
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "A radar chart example with custom tooltips for crash data.",
+  "width": 400,
+  "height": 400,
+
+  "padding": {"left": 60, "right": 150, "top": 40, "bottom": 40},
+
+  "autosize": {"type": "none", "contains": "padding"},
+
+  "signals": [
+    {"name": "radius", "update": "width / 2"}
+  ],
+
+  "data": [
+    {
+      "name": "table",
       "values": [
-        {"Type": "Pedestrian", "CrashCount": 7020, "Condition": "Hospitalized"},
-        {"Type": "Pedal Cycle", "CrashCount": 29587, "Condition": "Hospitalized"},
-        {"Type": "Motorcycle", "CrashCount": 29729, "Condition": "Hospitalized"},
-        {"Type": "Car", "CrashCount": 38094, "Condition": "Hospitalized"},
-        {"Type": "Heavy transport vehicle", "CrashCount": 2968, "Condition": "Hospitalized"},
-        {"Type": "Other land transport", "CrashCount": 2866, "Condition": "Hospitalized"},
-        {"Type": "Other", "CrashCount": 3417, "Condition": "Hospitalized"},
-        {"Type": "Pedestrian", "CrashCount": 344, "Condition": "Death"},
-        {"Type": "Pedal Cycle", "CrashCount": 72, "Condition": "Death"},
-        {"Type": "Motorcycle", "CrashCount": 496, "Condition": "Death"},
-        {"Type": "Car", "CrashCount": 1472, "Condition": "Death"},
-        {"Type": "Heavy transport vehicle", "CrashCount": 84, "Condition": "Death"},
-        {"Type": "Other land transport", "CrashCount": 152, "Condition": "Death"},
-        {"Type": "Other", "CrashCount": 168, "Condition": "Death"}
+        {"key": "Pedestrian", "value": 3.8463, "category": "hospitalized"},
+        {"key": "Pedal Cycle", "value": 4.4711, "category": "hospitalized"},
+        {"key": "Motorcycle", "value": 4.4732, "category": "hospitalized"},
+        {"key": "Car", "value": 4.5809, "category": "hospitalized"},
+        {"key": "Heavy transport vehicle", "value": 3.47246, "category": "hospitalized"},
+        {"key": "Other land transport", "value": 3.4573, "category": "hospitalized"},
+        {"key": "Other", "value": 3.5336, "category": "hospitalized"},
+        {"key": "Pedestrian", "value": 2.5365, "category": "death"},
+        {"key": "Pedal cycle", "value": 1.8573, "category": "death"},
+        {"key": "Motorcycle", "value": 2.6955, "category": "death"},
+        {"key": "Car", "value": 3.1679, "category": "death"},
+        {"key": "Heavy transport vehicle", "value": 1.9243, "category": "death"},
+        {"key": "Other land transport", "value": 2.1818, "category": "death"},
+        {"key": "Other", "value": 2.2253, "category": "death"}
       ]
     },
-    "transform": [
-      {
-        "aggregate": [{"op": "sum", "field": "CrashCount", "as": "TotalCrashCount"}],
-        "groupby": ["Type"]
+    {
+      "name": "keys",
+      "source": "table",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["key"],
+          "fields": ["value"],
+          "ops": ["sum"],
+          "as": ["total_value"]
+        }
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "angular",
+      "type": "point",
+      "range": {"signal": "[-PI, PI]"},
+      "padding": 0.5,
+      "domain": {"data": "table", "field": "key"}
+    },
+    {
+      "name": "radial",
+      "type": "linear",
+      "range": {"signal": "[0, radius]"},
+      "zero": true,
+      "nice": false,
+      "domain": {"data": "table", "field": "value"},
+      "domainMin": 0
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "table", "field": "category"},
+      "range": {"scheme": "category10"}
+    }
+  ],
+
+  "encode": {
+    "enter": {
+      "x": {"signal": "radius"},
+      "y": {"signal": "radius"}
+    }
+  },
+
+  "marks": [
+    {
+      "type": "group",
+      "name": "categories",
+      "zindex": 1,
+      "from": {
+        "facet": {"data": "table", "name": "facet", "groupby": ["category"]}
       },
-      {
-        "joinaggregate": [{"op": "sum", "field": "TotalCrashCount", "as": "OverallTotal"}]
-      },
-      {
-        "calculate": "datum.TotalCrashCount / datum.OverallTotal",
-        "as": "TypeProportion"
-      },
-      {
-        "calculate": "datum.CrashCount / datum.TotalCrashCount",
-        "as": "ConditionProportion"
+      "marks": [
+        {
+          "type": "line",
+          "name": "category-line",
+          "from": {"data": "facet"},
+          "encode": {
+            "enter": {
+              "interpolate": {"value": "linear-closed"},
+              "x": {"signal": "scale('radial', datum.value) * cos(scale('angular', datum.key))"},
+              "y": {"signal": "scale('radial', datum.value) * sin(scale('angular', datum.key))"},
+              "stroke": {"scale": "color", "field": "category"},
+              "strokeWidth": {"value": 1},
+              "fill": {"scale": "color", "field": "category"},
+              "fillOpacity": {"value": 0.1}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "rule",
+      "name": "radial-grid",
+      "from": {"data": "keys"},
+      "zindex": 0,
+      "encode": {
+        "enter": {
+          "x": {"value": 0},
+          "y": {"value": 0},
+          "x2": {"signal": "radius * cos(scale('angular', datum.key))"},
+          "y2": {"signal": "radius * sin(scale('angular', datum.key))"},
+          "stroke": {"value": "lightgray"},
+          "strokeWidth": {"value": 1}
+        }
       }
-    ],
-    "encoding": {
-      "x": {
-        "field": "TypeProportion",
-        "type": "quantitative",
-        "title": "Vehicle Type Proportion",
-        "axis": {"format": ".0%"}
-      },
-      "y": {
-        "field": "ConditionProportion",
-        "type": "quantitative",
-        "title": "Crash Condition Proportion",
-        "axis": {"format": ".0%"}
-      },
-      "color": {
-        "field": "Condition",
-        "type": "nominal",
-        "title": "Crash Condition",
-        "scale": {"scheme": "category20b"}
-      },
-      "tooltip": [
-        {"field": "Type", "title": "Vehicle Type"},
-        {"field": "Condition", "title": "Crash Condition"},
-        {"field": "CrashCount", "title": "Crash Count"},
-        {"field": "TypeProportion", "title": "Vehicle Proportion", "format": ".2%"},
-        {"field": "ConditionProportion", "title": "Condition Proportion", "format": ".2%"}
-      ]
     },
-    "mark": "bar"
-  }
-  
+    {
+      "type": "text",
+      "name": "key-label",
+      "from": {"data": "keys"},
+      "zindex": 1,
+      "encode": {
+        "enter": {
+          "x": {"signal": "(radius + 5) * cos(scale('angular', datum.key))"},
+          "y": {"signal": "(radius + 5) * sin(scale('angular', datum.key))"},
+          "text": {"field": "key"},
+          "align": [
+            {
+              "test": "abs(scale('angular', datum.key)) > PI / 2",
+              "value": "right"
+            },
+            {
+              "value": "left"
+            }
+          ],
+          "baseline": [
+            {
+              "test": "scale('angular', datum.key) > 0", "value": "top"
+            },
+            {
+              "test": "scale('angular', datum.key) == 0", "value": "middle"
+            },
+            {
+              "value": "bottom"
+            }
+          ],
+          "fill": {"value": "black"},
+          "fontWeight": {"value": "bold"}
+        },
+        "hover": {
+          "tooltip": {
+            "signal": "datum.key == 'Pedestrian' ? {'Vehicle Type': 'Pedestrian', 'Hospitalized': 7020, 'Deaths': 344} : datum.key == 'Pedal Cycle' ? {'Vehicle Type': 'Pedal Cycle', 'Hospitalized': 29587, 'Deaths': 72} : datum.key == 'Motorcycle' ? {'Vehicle Type': 'Motorcycle', 'Hospitalized': 29729, 'Deaths': 496} : datum.key == 'Car' ? {'Vehicle Type': 'Car', 'Hospitalized': 38094, 'Deaths': 1472} : datum.key == 'Other land transport' ? {'Vehicle Type': 'Other land transport', 'Hospitalized': 2866, 'Deaths': 152} : datum.key == 'Other' ? {'Vehicle Type': 'Other', 'Hospitalized': 3417, 'Deaths': 168} : {}"
+          }
+        }
+      }
+    },
+    {
+      "type": "line",
+      "name": "outer-grid-line",
+      "from": {"data": "radial-grid"},
+      "encode": {
+        "enter": {
+          "interpolate": {"value": "linear-closed"},
+          "x": {"field": "x2"},
+          "y": {"field": "y2"},
+          "stroke": {"value": "lightgray"},
+          "strokeWidth": {"value": 1}
+        }
+      }
+    }
+  ]
+}

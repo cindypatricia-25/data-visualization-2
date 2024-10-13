@@ -50,3 +50,17 @@ crash_count_by_remoteness <- data %>%
 
 # Optionally, write the result to a CSV file
 #write.csv(crash_count_by_remoteness, "crash_count_by_remoteness.csv", row.names = FALSE)
+
+
+
+bus_involve <- data %>% 
+  group_by(Bus.Involvement) %>%
+    summarise(CrashCount = n())
+
+print(bus_involve)
+
+heavy_involve <- data %>%
+  group_by(Heavy.Rigid.Truck.Involvement) %>%
+  summarise(CrashCount = n())
+
+  print(heavy_involve)
