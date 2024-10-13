@@ -1,0 +1,85 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Heatmap showing crash counts by remoteness and state.",
+    "data": {
+      "values": [
+        {"STATE_NAME": "Australian Capital Territory", "RoadType": "Access road", "CountCrash": 1},
+        {"STATE_NAME": "Australian Capital Territory", "RoadType": "Arterial Road", "CountCrash": 12},
+        {"STATE_NAME": "Australian Capital Territory", "RoadType": "Collector Road", "CountCrash": 8},
+        {"STATE_NAME": "Australian Capital Territory", "RoadType": "Local Road", "CountCrash": 9},
+        {"STATE_NAME": "Australian Capital Territory", "RoadType": "National or State Highway", "CountCrash": 4},
+        {"STATE_NAME": "New South Wales", "RoadType": "Access road", "CountCrash": 20},
+        {"STATE_NAME": "New South Wales", "RoadType": "Arterial Road", "CountCrash": 446},
+        {"STATE_NAME": "New South Wales", "RoadType": "Busway", "CountCrash": 2},
+        {"STATE_NAME": "New South Wales", "RoadType": "Collector Road", "CountCrash": 125},
+        {"STATE_NAME": "New South Wales", "RoadType": "Local Road", "CountCrash": 294},
+        {"STATE_NAME": "New South Wales", "RoadType": "National or State Highway", "CountCrash": 460},
+        {"STATE_NAME": "New South Wales", "RoadType": "Pedestrian Thoroughfare", "CountCrash": 1},
+        {"STATE_NAME": "New South Wales", "RoadType": "Sub-arterial Road", "CountCrash": 189},
+        {"STATE_NAME": "Northern Territory", "RoadType": "Access road", "CountCrash": 11},
+        {"STATE_NAME": "Northern Territory", "RoadType": "Arterial Road", "CountCrash": 41},
+        {"STATE_NAME": "Northern Territory", "RoadType": "Collector Road", "CountCrash": 4},
+        {"STATE_NAME": "Northern Territory", "RoadType": "Local Road", "CountCrash": 11},
+        {"STATE_NAME": "Northern Territory", "RoadType": "National or State Highway", "CountCrash": 37},
+        {"STATE_NAME": "Northern Territory", "RoadType": "Sub-arterial Road", "CountCrash": 52},
+        {"STATE_NAME": "Queensland", "RoadType": "Access road", "CountCrash": 17},
+        {"STATE_NAME": "Queensland", "RoadType": "Busway", "CountCrash": 2},
+        {"STATE_NAME": "Queensland", "RoadType": "Collector Road", "CountCrash": 139},
+        {"STATE_NAME": "Queensland", "RoadType": "Local Road", "CountCrash": 326},
+        {"STATE_NAME": "Queensland", "RoadType": "National or State Highway", "CountCrash": 455},
+        {"STATE_NAME": "Queensland", "RoadType": "Pedestrian Thoroughfare", "CountCrash": 2},
+        {"STATE_NAME": "Queensland", "RoadType": "Sub-arterial Road", "CountCrash": 387},
+        {"STATE_NAME": "South Australia", "RoadType": "Access road", "CountCrash": 5},
+        {"STATE_NAME": "South Australia", "RoadType": "Arterial Road", "CountCrash": 110},
+        {"STATE_NAME": "South Australia", "RoadType": "Collector Road", "CountCrash": 58},
+        {"STATE_NAME": "South Australia", "RoadType": "Local Road", "CountCrash": 82},
+        {"STATE_NAME": "South Australia", "RoadType": "National or State Highway", "CountCrash": 110},
+        {"STATE_NAME": "South Australia", "RoadType": "Sub-arterial Road", "CountCrash": 127},
+        {"STATE_NAME": "Tasmania", "RoadType": "Access road", "CountCrash": 5},
+        {"STATE_NAME": "Tasmania", "RoadType": "Arterial Road", "CountCrash": 30},
+        {"STATE_NAME": "Tasmania", "RoadType": "Collector Road", "CountCrash": 19},
+        {"STATE_NAME": "Tasmania", "RoadType": "Local Road", "CountCrash": 34},
+        {"STATE_NAME": "Tasmania", "RoadType": "National or State Highway", "CountCrash": 75},
+        {"STATE_NAME": "Tasmania", "RoadType": "Sub-arterial Road", "CountCrash": 23},
+        {"STATE_NAME": "Victoria", "RoadType": "Access road", "CountCrash": 20},
+        {"STATE_NAME": "Victoria", "RoadType": "Arterial Road", "CountCrash": 301},
+        {"STATE_NAME": "Victoria", "RoadType": "Collector Road", "CountCrash": 55},
+        {"STATE_NAME": "Victoria", "RoadType": "Local Road", "CountCrash": 246},
+        {"STATE_NAME": "Victoria", "RoadType": "National or State Highway", "CountCrash": 318},
+        {"STATE_NAME": "Victoria", "RoadType": "Pedestrian Thoroughfare", "CountCrash": 2},
+        {"STATE_NAME": "Victoria", "RoadType": "Sub-arterial Road", "CountCrash": 178},
+        {"STATE_NAME": "Western Australia", "RoadType": "Arterial Road", "CountCrash": 149},
+        {"STATE_NAME": "Western Australia", "RoadType": "Local Road", "CountCrash": 151},
+        {"STATE_NAME": "Western Australia", "RoadType": "National or State Highway", "CountCrash": 138}
+      ]
+    },
+    "mark": "rect",
+    "encoding": {
+      "x": {
+        "field": "STATE_NAME",
+        "type": "nominal",
+        "axis": {"labelAngle": -45, "title": "State"}
+      },
+      "y": {
+        "field": "RoadType",
+        "type": "nominal",
+        "axis": {"title": "Road Type"}
+      },
+      "color": {
+        "field": "CountCrash",
+        "type": "quantitative",
+        "scale": {"scheme": "purpleblue"},
+        "legend": {"title": "Crash Count"}
+      },
+      "tooltip": [
+        {"field": "STATE_NAME", "type": "nominal", "title": "State"},
+        {"field": "RoadType", "type": "nominal", "title": "Remoteness"},
+        {"field": "CountCrash", "type": "quantitative", "title": "Crash Count"}
+      ]
+    },
+    "config": {
+      "axis": {"grid": false},
+      "view": {"stroke": null}
+    }
+  }
+  

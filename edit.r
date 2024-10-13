@@ -71,4 +71,12 @@ remoteness <- data %>%
 
 print(remoteness)
 
-write.csv(remoteness, "remoteness.csv", row.names = FALSE)
+#write.csv(remoteness, "remoteness.csv", row.names = FALSE)
+
+roadtype <- data %>%
+  group_by(STATE_NAME, National.Road.Type) %>%
+  summarise(CountCrash = n())
+
+print(roadtype)
+
+write.csv(roadtype, "roadtype.csv", row.names = FALSE)

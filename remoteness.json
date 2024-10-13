@@ -1,42 +1,70 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A heatmap showing crash counts by remoteness category and state.",
+    "description": "Heatmap showing crash counts by remoteness and state.",
     "data": {
       "values": [
-        {"State": "NSW", "Remoteness": "Major Cities", "CrashCount": 500},
-        {"State": "NSW", "Remoteness": "Inner Regional", "CrashCount": 300},
-        {"State": "NSW", "Remoteness": "Outer Regional", "CrashCount": 150},
-        {"State": "VIC", "Remoteness": "Major Cities", "CrashCount": 400},
-        {"State": "VIC", "Remoteness": "Inner Regional", "CrashCount": 250},
-        {"State": "VIC", "Remoteness": "Outer Regional", "CrashCount": 100},
-        {"State": "QLD", "Remoteness": "Major Cities", "CrashCount": 350},
-        {"State": "QLD", "Remoteness": "Inner Regional", "CrashCount": 200},
-        {"State": "QLD", "Remoteness": "Remote", "CrashCount": 50},
-        {"State": "WA", "Remoteness": "Major Cities", "CrashCount": 450},
-        {"State": "WA", "Remoteness": "Remote", "CrashCount": 300},
-        {"State": "SA", "Remoteness": "Remote", "CrashCount": 250},
-        {"State": "SA", "Remoteness": "Very Remote", "CrashCount": 100}
+        {"STATE_NAME": "Australian Capital Territory", "Remoteness": "Inner Regional Australia", "CountCrash": 3},
+        {"STATE_NAME": "Australian Capital Territory", "Remoteness": "Major Cities of Australia", "CountCrash": 31},
+        {"STATE_NAME": "New South Wales", "Remoteness": "Inner Regional Australia", "CountCrash": 586},
+        {"STATE_NAME": "New South Wales", "Remoteness": "Major Cities of Australia", "CountCrash": 557},
+        {"STATE_NAME": "New South Wales", "Remoteness": "Outer Regional Australia", "CountCrash": 347},
+        {"STATE_NAME": "New South Wales", "Remoteness": "Remote Australia", "CountCrash": 35},
+        {"STATE_NAME": "New South Wales", "Remoteness": "Very Remote Australia", "CountCrash": 12},
+        {"STATE_NAME": "Northern Territory", "Remoteness": "Outer Regional Australia", "CountCrash": 61},
+        {"STATE_NAME": "Northern Territory", "Remoteness": "Remote Australia", "CountCrash": 36},
+        {"STATE_NAME": "Northern Territory", "Remoteness": "Very Remote Australia", "CountCrash": 59},
+        {"STATE_NAME": "Queensland", "Remoteness": "Inner Regional Australia", "CountCrash": 418},
+        {"STATE_NAME": "Queensland", "Remoteness": "Major Cities of Australia", "CountCrash": 423},
+        {"STATE_NAME": "Queensland", "Remoteness": "Outer Regional Australia", "CountCrash": 341},
+        {"STATE_NAME": "Queensland", "Remoteness": "Remote Australia", "CountCrash": 91},
+        {"STATE_NAME": "Queensland", "Remoteness": "Very Remote Australia", "CountCrash": 55},
+        {"STATE_NAME": "South Australia", "Remoteness": "Inner Regional Australia", "CountCrash": 125},
+        {"STATE_NAME": "South Australia", "Remoteness": "Major Cities of Australia", "CountCrash": 179},
+        {"STATE_NAME": "South Australia", "Remoteness": "Outer Regional Australia", "CountCrash": 131},
+        {"STATE_NAME": "South Australia", "Remoteness": "Remote Australia", "CountCrash": 27},
+        {"STATE_NAME": "South Australia", "Remoteness": "Very Remote Australia", "CountCrash": 30},
+        {"STATE_NAME": "Tasmania", "Remoteness": "Inner Regional Australia", "CountCrash": 67},
+        {"STATE_NAME": "Tasmania", "Remoteness": "Outer Regional Australia", "CountCrash": 111},
+        {"STATE_NAME": "Tasmania", "Remoteness": "Remote Australia", "CountCrash": 6},
+        {"STATE_NAME": "Tasmania", "Remoteness": "Very Remote Australia", "CountCrash": 2},
+        {"STATE_NAME": "Victoria", "Remoteness": "Inner Regional Australia", "CountCrash": 453},
+        {"STATE_NAME": "Victoria", "Remoteness": "Major Cities of Australia", "CountCrash": 513},
+        {"STATE_NAME": "Victoria", "Remoteness": "Outer Regional Australia", "CountCrash": 151},
+        {"STATE_NAME": "Victoria", "Remoteness": "Remote Australia", "CountCrash": 3},
+        {"STATE_NAME": "Western Australia", "Remoteness": "Inner Regional Australia", "CountCrash": 116},
+        {"STATE_NAME": "Western Australia", "Remoteness": "Major Cities of Australia", "CountCrash": 148},
+        {"STATE_NAME": "Western Australia", "Remoteness": "Outer Regional Australia", "CountCrash": 84},
+        {"STATE_NAME": "Western Australia", "Remoteness": "Remote Australia", "CountCrash": 39},
+        {"STATE_NAME": "Western Australia", "Remoteness": "Very Remote Australia", "CountCrash": 51}
       ]
     },
     "mark": "rect",
     "encoding": {
-      "x": {"field": "State", "type": "nominal", "axis": {"labelAngle": 0}},
-      "y": {"field": "Remoteness", "type": "nominal"},
+      "x": {
+        "field": "STATE_NAME",
+        "type": "nominal",
+        "axis": {"labelAngle": -45, "title": "State"}
+      },
+      "y": {
+        "field": "Remoteness",
+        "type": "nominal",
+        "axis": {"title": "Remoteness"}
+      },
       "color": {
-        "field": "CrashCount",
+        "field": "CountCrash",
         "type": "quantitative",
-        "scale": {"scheme": "reds"},
+        "scale": {"scheme": "yellowgreenblue"},
         "legend": {"title": "Crash Count"}
       },
       "tooltip": [
-        {"field": "State", "type": "nominal", "title": "State"},
+        {"field": "STATE_NAME", "type": "nominal", "title": "State"},
         {"field": "Remoteness", "type": "nominal", "title": "Remoteness"},
-        {"field": "CrashCount", "type": "quantitative", "title": "Crash Count"}
+        {"field": "CountCrash", "type": "quantitative", "title": "Crash Count"}
       ]
     },
     "config": {
-      "view": {"stroke": null},
-      "axis": {"grid": false}
+      "axis": {"grid": false},
+      "view": {"stroke": null}
     }
   }
   
