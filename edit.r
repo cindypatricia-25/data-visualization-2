@@ -100,4 +100,22 @@ speed <- data %>%
 
 print(speed)
 
-write.csv(speed, "speedtime.csv", row.names = FALSE)
+#write.csv(speed, "speedtime.csv", row.names = FALSE)
+
+
+lga <- data %>%
+  group_by(LGA) %>%
+  summarise(CountCrash = n())
+
+print(lga)
+
+write.csv(lga, "lga.csv", row.names = FALSE)
+
+
+state <- data %>%
+  group_by(STATE_NAME) %>%
+  summarise(CountCrash = n())
+
+print(state)
+
+write.csv(state, "state.csv", row.names = FALSE)

@@ -1,4 +1,4 @@
-﻿Crash ID,State,Month,Year,Dayweek,Time,Crash Type,Bus Involvement,Heavy Rigid Truck Involvement,Articulated Truck Involvement,Speed Limit,Road User,Gender,Age,National Remoteness Areas,,National LGA Name 2021,National Road Type,Christmas Period,Easter Period,Age Group,Day of week,Time of day,STATE_NAME,crash
+﻿Crash ID,State,Month,Year,Dayweek,Time,Crash Type,Bus Involvement,Heavy Rigid Truck Involvement,Articulated Truck Involvement,Speed Limit,Road User,Gender,Age,National Remoteness Areas,,LGA,National Road Type,Christmas Period,Easter Period,Age Group,Day of week,Time of day,STATE_NAME,crash
 20234081,SA,12,2023,Friday,1:42,Single,No,No,No,60,Motorcycle rider,Male,37,Major Cities of Australia,,Salisbury,Collector Road,Yes,No,26_to_39,Weekday,Night,South Australia,1
 20234093,SA,12,2023,Friday,4:15,Single,No,No,No,60,Pedestrian,Male,37,Major Cities of Australia,,Playford,Sub-arterial Road,No,No,26_to_39,Weekday,Night,South Australia,1
 20233046,Qld,12,2023,Friday,6:00,Multiple,No,No,Yes,100,Motorcycle rider,Male,43,Inner Regional Australia,,Lockyer Valley,National or State Highway,No,No,40_to_64,Weekday,Day,Queensland,1

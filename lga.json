@@ -1,0 +1,65 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 700,
+    "height": 500,
+    "background": "#f7f7f7",
+    
+    "data": {
+      "url": "js/topolga.json",  
+      "format": {
+        "type": "topojson",
+        "feature": "georef-australia-local-government-area@public"  
+      }
+    },
+    "transform": [
+      {
+        "lookup": "properties.lga_name[0]",  
+        "from": {
+          "data": {
+            "url": "lga.csv"  
+          },
+          "key": "LGA",  
+          "fields": ["CountCrash"]  
+        }
+      },
+    {"calculate": "datum.CountCrash + 0.1", "as": "Total crashes"}
+    ],
+    "projection": {
+      "type": "mercator"  
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "geoshape",  
+          "stroke": "black",  
+          "strokeWidth": 1  
+        },
+        "encoding": {
+          "color": {
+            "field": "CountCrash",  
+            "type": "quantitative",  
+            "scale": {
+                "type": "log",
+              "scheme": "lighttealblue"  
+            },
+            "legend": {
+              "title": "Crash Count"  
+            }
+          },
+          "tooltip": [
+            {
+              "field": "properties.lga_name[0]",  
+              "type": "nominal",
+              "title": "LGA"
+            },
+            {
+              "field": "CountCrash",  
+              "type": "quantitative",
+              "title": "Crash Count normalized by population"
+            }
+          ]
+        }
+      }
+    ]
+  }
+  

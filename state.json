@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 700,
     "height": 500,
-    "title": "Road Crash in Australia from 1989 - 2024",
+    "background": "#f7f7f7",
     "data": {
       "url": "js//australian-states (1).json",
       "format": {
@@ -15,10 +15,10 @@
         "lookup": "properties.STATE_NAME",
         "from": {
           "data": {
-            "url": "data//count by states.csv"
+            "url": "state.csv"
           },
           "key": "STATE_NAME",
-          "fields": ["Count of Crash"]
+          "fields": ["CountCrash"]
         }
       }
     ],
@@ -34,7 +34,7 @@
         },
         "encoding": {
           "color": {
-            "field": "Count of Crash",
+            "field": "CountCrash",
             "type": "quantitative",
             "scale": {
               "scheme": "lighttealblue"

@@ -1,0 +1,484 @@
+"LGA","CountCrash"
+"Adelaide",5
+"Adelaide Hills",25
+"Adelaide Plains",10
+"Albany",3
+"Albury",5
+"Alexandrina",17
+"Alice Springs",8
+"Alpine",5
+"Anangu Pitjantjatjara Yunkunytjatjara",2
+"Ararat",5
+"Armadale",13
+"Armidale Regional",7
+"Ashburton",3
+"Augusta Margaret River",7
+"Ballarat",12
+"Ballina",11
+"Balonne",3
+"Balranald",7
+"Banana",12
+"Banyule",8
+"Barcaldine",1
+"Barcoo",1
+"Barkly",7
+"Barossa",14
+"Barunga West",4
+"Bass Coast",9
+"Bassendean",1
+"Bathurst Regional",10
+"Baw Baw",14
+"Bayside",16
+"Bayside (Vic.)",2
+"Bayswater",3
+"Bega Valley",7
+"Bellingen",10
+"Belmont",3
+"Benalla",5
+"Berri Barmera",2
+"Berrigan",3
+"Beverley",2
+"Blacktown",38
+"Bland",7
+"Blayney",2
+"Blue Mountains",10
+"Boddington",2
+"Bogan",5
+"Boroondara",7
+"Break O'Day",7
+"Brewarrina",5
+"Bridgetown-Greenbushes",2
+"Brighton",6
+"Brimbank",31
+"Brisbane",113
+"Broken Hill",1
+"Brookton",1
+"Broome",3
+"Broomehill-Tambellup",6
+"Bruce Rock",2
+"Bulloo",1
+"Buloke",7
+"Bunbury",4
+"Bundaberg",59
+"Burdekin",13
+"Burke",1
+"Burnie",6
+"Burnside",1
+"Burwood",2
+"Busselton",15
+"Byron",9
+"Cabonne",14
+"Cairns",34
+"Cambridge",3
+"Camden",8
+"Campaspe",20
+"Campbelltown",18
+"Campbelltown (SA)",7
+"Canada Bay",3
+"Canning",10
+"Canterbury-Bankstown",34
+"Capel",7
+"Cardinia",28
+"Carnamah",1
+"Carnarvon",1
+"Carpentaria",1
+"Carrathool",7
+"Casey",40
+"Cassowary Coast",20
+"Ceduna",3
+"Central Coast",48
+"Central Coast (Tas.)",5
+"Central Darling",2
+"Central Desert",7
+"Central Goldfields",7
+"Central Highlands (Qld)",21
+"Central Highlands (Tas.)",2
+"Cessnock",25
+"Chapman Valley",2
+"Charles Sturt",13
+"Charters Towers",17
+"Chittering",3
+"Circular Head",6
+"Clare and Gilbert Valleys",5
+"Clarence",9
+"Clarence Valley",32
+"Cleve",3
+"Cloncurry",12
+"Cobar",3
+"Cockburn",8
+"Coffs Harbour",18
+"Colac Otway",11
+"Collie",3
+"Coober Pedy",1
+"Cook",10
+"Coolamon",3
+"Coolgardie",3
+"Coomalie",5
+"Coonamble",3
+"Coorong",9
+"Cootamundra-Gundagai",5
+"Copper Coast",4
+"Corangamite",19
+"Corrigin",2
+"Cowra",9
+"Cranbrook",1
+"Croydon",1
+"Cuballing",2
+"Cue",1
+"Cumberland",25
+"Cunderdin",1
+"Dalwallinu",1
+"Dandaragan",5
+"Dardanup",7
+"Darebin",12
+"Darwin",16
+"Denmark",2
+"Derby-West Kimberley",10
+"Derwent Valley",6
+"Devonport",6
+"Donnybrook-Balingup",9
+"Doomadgee",1
+"Dorset",3
+"Douglas",11
+"Dowerin",1
+"Dubbo Regional",24
+"Dumbleyung",1
+"Dundas",4
+"Dungog",1
+"East Arnhem",3
+"East Gippsland",18
+"East Pilbara",1
+"Elliston",2
+"Esperance",5
+"Etheridge",3
+"Eurobodalla",31
+"Fairfield",24
+"Federation",16
+"Flinders (Qld)",2
+"Flinders Ranges",1
+"Forbes",7
+"Franklin Harbour",1
+"Frankston",19
+"Fraser Coast",43
+"Fremantle",2
+"Gannawarra",4
+"Gawler",4
+"George Town",2
+"Georges River",16
+"Gilgandra",3
+"Gingin",5
+"Gladstone",29
+"Glamorgan-Spring Bay",2
+"Glen Eira",8
+"Glen Innes Severn",8
+"Glenelg",12
+"Glenorchy",9
+"Gnowangerup",1
+"Gold Coast",85
+"Golden Plains",12
+"Goondiwindi",6
+"Gosnells",7
+"Goulburn Mulwaree",17
+"Goyder",3
+"Grant",9
+"Greater Bendigo",28
+"Greater Dandenong",17
+"Greater Geelong",45
+"Greater Geraldton",8
+"Greater Hume",17
+"Greater Shepparton",29
+"Griffith",6
+"Gunnedah",6
+"Gwydir",3
+"Gympie",44
+"Halls Creek",3
+"Harvey",11
+"Hawkesbury",15
+"Hay",3
+"Hepburn",17
+"Hilltops",11
+"Hinchinbrook",4
+"Hindmarsh",1
+"Hobart",6
+"Hobsons Bay",10
+"Holdfast Bay",4
+"Hope Vale",3
+"Hornsby",14
+"Horsham",14
+"Hume",25
+"Hunters Hill",2
+"Huon Valley",8
+"Indigo",11
+"Inner West",15
+"Inverell",11
+"Ipswich",38
+"Irwin",2
+"Isaac",29
+"Jerramungup",2
+"Joondalup",7
+"Junee",6
+"Kalamunda",3
+"Kalgoorlie-Boulder",11
+"Kangaroo Island",6
+"Karoonda East Murray",2
+"Karratha",2
+"Katanning",1
+"Katherine",4
+"Kempsey",15
+"Kent",1
+"Kentish",2
+"Kiama",1
+"Kimba",1
+"King Island",2
+"Kingborough",6
+"Kingston (SA)",3
+"Kingston (Vic.)",13
+"Knox",7
+"Kojonup",2
+"Kondinin",2
+"Ku-ring-gai",6
+"Kulin",2
+"Kwinana",5
+"Kyogle",8
+"Lachlan",5
+"Lake Grace",2
+"Lake Macquarie",31
+"Lane Cove",2
+"Latrobe (Tas.)",11
+"Latrobe (Vic.)",24
+"Launceston",21
+"Leeton",4
+"Light",15
+"Lismore",15
+"Litchfield",32
+"Lithgow",16
+"Liverpool",28
+"Liverpool Plains",3
+"Livingstone",19
+"Lockhart",3
+"Lockhart River",1
+"Lockyer Valley",16
+"Loddon",13
+"Logan",64
+"Longreach",4
+"Lower Eyre Peninsula",3
+"Loxton Waikerie",9
+"MacDonnell",17
+"Macedon Ranges",16
+"Mackay",36
+"Maitland",14
+"Mandurah",8
+"Manjimup",5
+"Manningham",8
+"Mansfield",8
+"Maranoa",12
+"Mareeba",24
+"Maribyrnong",7
+"Marion",11
+"Maroondah",10
+"McKinlay",4
+"Meander Valley",9
+"Meekatharra",4
+"Melbourne",16
+"Melton",19
+"Melville",2
+"Menzies",2
+"Mid Murray",13
+"Mid-Coast",32
+"Mid-Western Regional",19
+"Mildura",18
+"Mitcham",8
+"Mitchell",20
+"Moira",24
+"Monash",29
+"Moonee Valley",8
+"Moora",1
+"Moorabool",16
+"Moree Plains",8
+"Moreland",9
+"Moreton Bay",90
+"Mornington",1
+"Mornington Peninsula",40
+"Mosman",1
+"Mount Alexander",12
+"Mount Barker",14
+"Mount Gambier",2
+"Mount Isa",6
+"Mount Magnet",1
+"Mount Marshall",2
+"Mount Remarkable",4
+"Moyne",7
+"Mundaring",8
+"Murray",12
+"Murray Bridge",11
+"Murray River",5
+"Murrindindi",17
+"Murrumbidgee",6
+"Murweh",1
+"Muswellbrook",12
+"Nambucca",5
+"Nambucca Valley",4
+"Nannup",1
+"Naracoorte Lucindale",8
+"Narrabri",14
+"Narrandera",5
+"Narromine",5
+"Nedlands",1
+"Newcastle",14
+"Ngaanyatjarraku",1
+"Nillumbik",9
+"Noosa",16
+"North Burnett",11
+"North Sydney",6
+"Northam",5
+"Northampton",2
+"Northern Areas",1
+"Northern Beaches",17
+"Northern Grampians",12
+"Northern Midlands",11
+"Northern Peninsula Area",2
+"Norwood Payneham and St Peters",4
+"Nungarin",2
+"Oberon",3
+"Onkaparinga",23
+"Orange",4
+"Orroroo Carrieton",1
+"Palmerston",9
+"Parkes",6
+"Parramatta",29
+"Penrith",22
+"Perenjori",1
+"Perth",5
+"Pingelly",1
+"Plantagenet",10
+"Playford",19
+"Port Adelaide Enfield",18
+"Port Augusta",13
+"Port Hedland",7
+"Port Lincoln",1
+"Port Macquarie-Hastings",20
+"Port Phillip",8
+"Port Pirie",8
+"Port Stephens",23
+"Prospect",4
+"Pyrenees",6
+"Quairading",1
+"Queanbeyan-Palerang Regional",14
+"Quilpie",2
+"Randwick",11
+"Ravensthorpe",1
+"Redland",15
+"Renmark Paringa",8
+"Richmond Valley",17
+"Robe",1
+"Rockhampton",20
+"Rockingham",12
+"Roper Gulf",13
+"Ryde",8
+"Salisbury",31
+"Scenic Rim",37
+"Serpentine-Jarrahdale",15
+"Shellharbour",7
+"Shoalhaven",31
+"Singleton",17
+"Snowy Monaro Regional",19
+"Snowy Valleys",11
+"Somerset",29
+"Sorell",6
+"South Burnett",31
+"South Gippsland",21
+"South Perth",1
+"Southern Downs",25
+"Southern Grampians",5
+"Southern Mallee",3
+"Southern Midlands",10
+"Stirling",7
+"Stonnington",3
+"Strathbogie",14
+"Strathfield",1
+"Streaky Bay",4
+"Sunshine Coast",71
+"Surf Coast",4
+"Sutherland",19
+"Swan",16
+"Swan Hill",8
+"Sydney",26
+"Tablelands",18
+"Tamworth Regional",22
+"Tasman",2
+"Tatiara",11
+"Tea Tree Gully",6
+"Temora",6
+"Tenterfield",7
+"The Hills",12
+"Toodyay",2
+"Toowoomba",64
+"Townsville",49
+"Towong",9
+"Tumby Bay",1
+"Tweed",21
+"Unincorporated",5
+"Unincorporated ACT",34
+"Unincorporated NT",9
+"Unincorporated SA",23
+"Unley",4
+"Upper Hunter",5
+"Upper Lachlan",20
+"Uralla",3
+"Victor Harbor",4
+"Victoria Daly",16
+"Victoria Park",3
+"Victoria Plains",3
+"Vincent",6
+"Wagga Wagga",27
+"Wagin",3
+"Wakefield",13
+"Walcha",10
+"Walgett",4
+"Walkerville",1
+"Wandering",2
+"Wangaratta",11
+"Wanneroo",18
+"Waratah-Wynyard",11
+"Waroona",4
+"Warren",1
+"Warrnambool",9
+"Warrumbungle",15
+"Wattle Range",9
+"Waverley",6
+"Weddin",7
+"Wellington",19
+"Wentworth",7
+"West Arnhem",10
+"West Arthur",1
+"West Coast",4
+"West Tamar",8
+"West Torrens",6
+"West Wimmera",9
+"Western Downs",20
+"Whitehorse",8
+"Whitsunday",20
+"Whittlesea",23
+"Whyalla",3
+"Wickepin",2
+"Williams",4
+"Willoughby",5
+"Wingecarribee",23
+"Wodonga",5
+"Wollondilly",20
+"Wollongong",31
+"Wongan-Ballidu",1
+"Woodanilling",1
+"Woollahra",2
+"Wudinna",2
+"Wyndham",29
+"Wyndham-East Kimberley",4
+"Yankalilla",5
+"Yarra",10
+"Yarra Ranges",39
+"Yarrabah",2
+"Yarriambiack",6
+"Yass Valley",18
+"Yilgarn",4
+"York",3
+"Yorke Peninsula",6
