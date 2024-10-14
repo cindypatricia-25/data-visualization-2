@@ -4,56 +4,84 @@
     "height": 500,
     "background": "#f7f7f7",
     
+    "params": [
+      {
+        "name": "StateSelection",
+        "bind": {
+          "input": "select",
+          "options": [
+            "All States",
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "Western Australia",
+            "South Australia",
+            "Tasmania",
+            "Northern Territory",
+            "Australian Capital Territory"
+          ],
+          "name": "Select State: "
+        },
+        "value": "All States"
+      }
+    ],
+  
     "data": {
-      "url": "js/topolga.json",  
+      "url": "js/topolga.json",
       "format": {
         "type": "topojson",
-        "feature": "georef-australia-local-government-area@public"  
+        "feature": "georef-australia-local-government-area@public"
       }
     },
+  
     "transform": [
       {
-        "lookup": "properties.lga_name[0]",  
+        "lookup": "properties.lga_name[0]",
         "from": {
           "data": {
-            "url": "lga.csv"  
+            "url": "lga.csv"
           },
-          "key": "LGA",  
-          "fields": ["CountCrash"]  
+          "key": "LGA",
+          "fields": ["CountCrash"]
         }
       },
-    {"calculate": "datum.CountCrash + 0.1", "as": "Total crashes"}
+      {"calculate": "datum.CountCrash + 0.1", "as": "Total crashes"},
+      {
+        "filter": "StateSelection === 'All States' || datum.properties.ste_name[0] === StateSelection"
+      }
     ],
+  
     "projection": {
-      "type": "mercator"  
+      "type": "mercator"
     },
+  
     "layer": [
       {
         "mark": {
-          "type": "geoshape",  
-          "stroke": "black",  
-          "strokeWidth": 1  
+          "type": "geoshape",
+          "stroke": "black",
+          "strokeWidth": 1
         },
         "encoding": {
           "color": {
-            "field": "CountCrash",  
-            "type": "quantitative",  
+            "field": "CountCrash",
+            "type": "quantitative",
             "scale": {
-                "type": "log",
-              "scheme": "lighttealblue"  
+              "type": "log",
+              "scheme": "lighttealblue"
             },
             "legend": {
-              "title": "Crash Count"  
+              "title": "Crash Count"
             }
           },
           "tooltip": [
             {
-              "field": "properties.lga_name[0]",  
+              "field": "properties.lga_name[0]",
               "type": "nominal",
               "title": "LGA"
             },
             {
-              "field": "CountCrash",  
+              "field": "CountCrash",
               "type": "quantitative",
               "title": "Crash Count normalized by population"
             }

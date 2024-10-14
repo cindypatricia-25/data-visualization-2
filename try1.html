@@ -9,44 +9,67 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Text Content Section -->
-        <div class="text-content">
-            <h1>Road Crash in Australia</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ab nesciunt praesentium blanditiis animi!</p>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1>The Collision Course</h1>
+        <ul>
+            <li><a href="#main">Main</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#behaviour">Behaviour</a></li>
+            <li><a href="#author">Author</a></li>
+        </ul>
+    </nav>
+
+    <!-- State Section -->
+    <section class="statesection" id="main">
+        <div class="content">
+            <h2>Road Crashes and Safety Insights Across Australia</h2>
+            <p>We offer amazing services to help you grow your business. Explore our offerings and get started today!</p>
         </div>
 
-        <!-- State Section -->
         <div id="state"></div>
 
-    </div>
+    
+    </section>
 
-
-    <div class="trendcontainer">
-        <div class = "text-content">
-                <p>Trend in australia over time</p>
+    <!-- Services Section -->
+    <section class="insights" id="insights">
+        <h2>Insights</h2>
+        <div class="insights-card">
+            <div class="insights-card">
+                <h3>Web Development</h3>
+                <p>We create responsive and modern websites tailored to your needs.</p>
+            </div>
+            <div class="insights-card">
+                <h3>Graphic Design</h3>
+                <p>Our design team delivers stunning visuals for your brand.</p>
+            </div>
+            <div class="insights-card">
+                <h3>SEO Optimization</h3>
+                <p>Boost your website traffic and rankings with our expert SEO services.</p>
+            </div>
         </div>
+    </section>
 
-        <div id ="trend"></div>
-
-
-    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p> Author: Cindy Patricia | Date: 15 October 2024</p>
+    </footer>
 
     <script type="text/javascript">
         vegaEmbed('#state', 'state.json').then(function(result) {
-            // Do something if needed with the result
-        }).catch(console.error);
-
-        vegaEmbed('#trend', 'trend.json').then(function(result) {
             // Do something if needed with the result
         }).catch(console.error);
     </script>
 
 </body>
 </html>
+
+
+
 

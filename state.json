@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 700,
     "height": 500,
-    "background": "#f7f7f7",
+    "background": "#615e5e",
     "data": {
       "url": "js//australian-states (1).json",
       "format": {
@@ -41,6 +41,7 @@
             },
             "legend": {
               "title": "Crash Count"
+
             }
           },
           "tooltip": [
@@ -72,7 +73,6 @@
         "mark": {
           "type": "text",
           "fontSize": 12,
-          "fontWeight": "bold",
           "dy": 0,
           "color": "black"
         },
