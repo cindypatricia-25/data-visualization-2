@@ -1,0 +1,25 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Pie chart for License Crash Count",
+    "data": {
+      "values": [
+        {"License": "All operators valid license", "CrashCount": 678},
+        {"License": "Any operators with invalid license", "CrashCount": 128},
+        {"License": "Unknown", "CrashCount": 129}
+      ]
+    },
+    "mark": {"type": "arc", "innerRadius": 50},
+    "encoding": {
+      "theta": {"field": "CrashCount", "type": "quantitative"},
+      "color": {
+        "field": "License", 
+        "type": "nominal",
+        "scale": {
+          "domain": ["All operators valid license", "Any operators with invalid license", "Unknown"],
+          "range": ["#a4dcec", "#ecb5a4", "#868c8e"]  
+        }
+      },
+      "tooltip": [{"field": "License"}, {"field": "CrashCount"}]
+    }
+  }
+  

@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Pie chart for Alcohol test crash count with custom colors",
+    "data": {
+      "values": [
+        {"Alcohol Test": "Yes", "CrashCount": 137},
+        {"Alcohol Test": "No", "CrashCount": 595}
+      ]
+    },
+    "mark": {"type": "arc", "innerRadius": 50},
+    "encoding": {
+      "theta": {"field": "CrashCount", "type": "quantitative"},
+      "color": {
+        "field": "Alcohol Test", 
+        "type": "nominal",
+        "scale": {
+          "domain": ["Yes", "No"],
+          "range": ["#b7f997", "#fb7d88"]  
+        }
+      },
+      "tooltip": [{"field": "Alcohol Test"}, {"field": "CrashCount"}]
+    }
+  }
+  
