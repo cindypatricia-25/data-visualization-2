@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 700,
-    "height": 500,
+    "width": 900,
+    "height": 700,
     "background": "#615e5e",
     "data": {
       "url": "js//australian-states (1).json",
@@ -37,7 +37,7 @@
             "field": "CountCrash",
             "type": "quantitative",
             "scale": {
-              "scheme": "lighttealblue"
+              "scheme": "browns"
             },
             "legend": {
               "title": "Crash Count"
@@ -51,7 +51,7 @@
               "title": "State"
             },
             {
-              "field": "Count of Crash",
+              "field": "CountCrash",
               "type": "quantitative",
               "title": "Crash Count normalized by population"
             }

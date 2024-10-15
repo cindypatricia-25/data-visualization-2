@@ -1,11 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height": 400,
+    "width": 500,
+    "height": 200,
+    "background": "#fafafa",
     "title": "Crash Count per Speed Limit by State (2019-2023)",
     "data": {
       "url": "speedtime.csv"  
     },
+
     "params": [
       {
         "name": "YearSelection",
@@ -71,14 +73,14 @@
             "Western Australia"
           ],
           "range": [
-            "#1f77b4",  
-            "#ff7f0e",  
-            "#2ca02c",  
-            "#d62728", 
-            "#9467bd",  
-            "#8c564b",  
-            "#e377c2",  
-            "#7f7f7f"   
+          "#6d6554",  
+            "#287973",  
+            "#6bb9e2",  
+            "#c8a584", 
+            "#ccd5ec",  
+            "#ffb360",  
+            "#6e301d",  
+            "#9a9ab0"   
           ]
         }
       },

@@ -8,6 +8,7 @@
         {"Category": "Heavy Rigid Truck Involvement", "Condition": "Yes", "CrashCount": 364}
       ]
     },
+    "background": "#fafafa",
     "transform": [
       {
         "joinaggregate": [
@@ -35,7 +36,7 @@
               "title": "Involvement Type", 
               "orient" : "right",
             "offset": 50},
-            "scale": {"scheme": "accent"}
+            "scale": {"scheme": "blueorange"}
           },
           "tooltip": [
             {"field": "Category", "type": "nominal", "title": "Involvement Type"},

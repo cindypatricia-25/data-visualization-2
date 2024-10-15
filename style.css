@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #f7f7f7;
-    color: #333;
+    background-color: #a9bfc9 ;
+    color:#333;
 }
 
 a {
@@ -22,7 +22,7 @@ a {
     align-items: center;
     padding: 20px;
     background-color: #615e5e;
-    color: white;
+    color: #ffd966;
 }
 
 .navbar h1 {
@@ -39,7 +39,7 @@ a {
 }
 
 .navbar ul li a {
-    color: white;
+    color: #ffd966;
     font-weight: bold;
     padding: 8px 12px;
     transition: background-color 0.3s;
@@ -75,23 +75,25 @@ a {
     margin-bottom: 30px;
 }
 
-/* insight Section */
+/* Insights Section */
 .insights {
     padding: 60px;
-    background-color: #fff;
+    background-color: #a9bfc9;
 }
 
-.insights h2 {
+.insights h3 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.5rem;
     color: #333;
 }
 
-.insights-cards {
+/* Insights cards for "Remoteness" and "Speed Limit" */
+.insights-side-by-side {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 30px;
+    margin-bottom: 60px; /* Adds space between groups */
 }
 
 .insights-card {
@@ -100,26 +102,74 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center;
+    flex: 1;
     transition: transform 0.3s;
+    margin-bottom: 40px;
 }
 
 .insights-card:hover {
     transform: translateY(-10px);
 }
 
-.insights-card h3 {
+.insights-card h4 {
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
 .insights-card p {
-    line-height: 1.6;
+    line-height: 2;
+    color: #666;
+}
+
+/* Behaviour Section */
+.behaviour {
+    padding: 60px;
+    background-color: #a9bfc9;
+}
+
+.behaviour h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Insights cards for "Remoteness" and "Speed Limit" */
+.behaviour-side-by-side {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 60px; /* Adds space between groups */
+}
+
+.behaviour-card {
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s;
+    margin-bottom: 40px;
+}
+
+.behaviour-card:hover {
+    transform: translateY(-10px);
+}
+
+.behaviour-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.behaviour-card p {
+    line-height: 2;
     color: #666;
 }
 
 /* Footer */
 .footer {
-    background-color: #333;
+    background-color: #615e5e;
     color: white;
     padding: 20px;
     text-align: center;
@@ -136,23 +186,83 @@ a {
         text-align: center;
     }
 
-    .statesection img {
-        max-width: 80%;
-        margin-top: 20px;
-    }
-
-    .insights-cards {
+    .insights-side-by-side {
         flex-direction: column;
     }
 
-    .insights-card {
+    .behaviour-side-by-side {
+        flex-direction: column;
+    }
+}
+
+/* LGA Card specific styling */
+.LGA-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 40px; /* Space between the LGA card and the next section */
+    transition: transform 0.3s;
+}
+
+.LGA-card:hover {
+    transform: translateY(-10px);
+}
+
+/* LGA Map on the left */
+.LGA-card #LGA {
+    flex: 1;
+    margin-right: 20px; /* Add space between the map and the text */
+}
+
+/* Text on the right */
+.LGA-card .LGA-text {
+    flex: 1;
+    text-align: left; /* Align text to the left */
+}
+
+.LGA-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.LGA-card p {
+    line-height: 2;
+    color: #666;
+    font-size: 1.3rem;
+}
+
+/* Responsive design for LGA card */
+@media (max-width: 768px) {
+    .LGA-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .LGA-card #LGA {
+        margin-right: 0;
         margin-bottom: 20px;
     }
 
-#state {
-    width: 45%;  /* Adjust this width as needed */
-    height: 500px; /* Height of the visualization */
-    background-color: #333;
-}
+    .LGA-card .LGA-text {
+        text-align: center;
+    }
 }
 
+/* LGA Card specific styling ENDS */
+
+.funfact {
+    font-size: 1.5rem; /* Larger size */
+    font-weight: bold; /* Bold text */
+    background: linear-gradient(to right, #f39c12, #f1c40f); /* Gradient from yellow to orange */
+    color: white; /* Text color */
+    padding: 5px 10px;
+    border-radius: 5px; /* Rounded edges */
+}
+
+.highlight {
+    color: red;
+}

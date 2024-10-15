@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "data//time.csv"},
+  "background": "#fafafa",
   "params": [
     {
       "name": "StateSelector",
@@ -43,7 +44,7 @@
       "title": "Time of Day",
       "scale": {
         "domain": ["Day", "Night"],
-        "range": ["#fff3ac", "#97e1ff"]  
+        "range": ["#acbfd4", "#747585"]  
       }
     },
     "tooltip": [

@@ -7,6 +7,7 @@
         {"Alcohol Test": "No", "CrashCount": 595}
       ]
     },
+    "background": "#fafafa",
     "mark": {"type": "arc", "innerRadius": 50},
     "encoding": {
       "theta": {"field": "CrashCount", "type": "quantitative"},
@@ -15,7 +16,7 @@
         "type": "nominal",
         "scale": {
           "domain": ["Yes", "No"],
-          "range": ["#b7f997", "#fb7d88"]  
+          "range": ["#5e2917", "#f5a75b"]  
         }
       },
       "tooltip": [{"field": "Alcohol Test"}, {"field": "CrashCount"}]

@@ -21,6 +21,7 @@
       {"country": "No Restraint", "animal": "cross"}
     ]
   },
+  "background": "#fafafa",
   "transform": [
     {
       "calculate": "{'helmet': '🪖', 'cross': '❌'}[datum.animal]",

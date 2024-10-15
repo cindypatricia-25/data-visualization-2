@@ -8,6 +8,7 @@
         {"Category": "Christmas Period", "Condition": "Yes", "CrashCount": 150}
       ]
     },
+    "background": "#fafafa",
     "transform": [
       {
         "joinaggregate": [
@@ -35,7 +36,7 @@
               "title": "Involvement Type", 
               "orient" : "right",
             "offset": 50},
-            "scale": {"scheme": "set3"}
+            "scale": {"scheme": "brownbluegreen"}
           },
           "tooltip": [
             {"field": "Category", "type": "nominal", "title": "Involvement Type"},

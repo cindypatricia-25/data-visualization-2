@@ -21,55 +21,183 @@
             <li><a href="#main">Main</a></li>
             <li><a href="#insights">Insights</a></li>
             <li><a href="#behaviour">Behaviour</a></li>
-            <li><a href="#author">Author</a></li>
+            <li><a href="#footer">Author</a></li>
         </ul>
     </nav>
-
+<div>
     <!-- State Section -->
     <section class="statesection" id="main">
         <div class="content">
             <h2>Road Crashes and Safety Insights Across Australia</h2>
-            <p>We offer amazing services to help you grow your business. Explore our offerings and get started today!</p>
+            <p>Using data from the <u><a href="https://www.bitre.gov.au/publications/ongoing/road_deaths_australia_monthly_bulletins">Australian Government, Department of Infrastructure, Transport, Regional Development, Communications and the Arts</a></u>, spanning from 2019 to 2023, we have created meaningful visualizations to highlight road safety across Australia. The visualization particularly emphasizes the higher number of road crashes in New South Wales compared to other states, showcasing the importance of addressing safety measures in this region.</p>
         </div>
 
         <div id="state"></div>
-
     
     </section>
 
-    <!-- Services Section -->
+    <!-- Insights Section -->
     <section class="insights" id="insights">
-        <h2>Insights</h2>
-        <div class="insights-card">
+        <h3>Geographic and Environmental Insights</h3>
+        <div class="LGA-card">
+            <div id="LGA"></div> <!-- LGA map on the left -->
+            <div class="LGA-text"> <!-- Text on the right -->
+                <h4>Crash by Local Government Area (LGA)</h4>
+                <p>This map illustrates the distribution of road crashes across Australia at the Local Government Area (LGA) level. 
+                    Each region is color-coded based on the number of reported crashes, with darker shades representing higher crash counts. 
+                    The white areas on the map indicate LGAs where no road crashes were detected during the period of analysis. 
+                    This visualization provides a geographic overview of road safety, helping identify regions with higher incidences of crashes. 
+                    By highlighting crash hotspots, the map supports data-driven decision-making, allowing local authorities and policy-makers to 
+                    focus on regions that may benefit from targeted road safety interventions.
+                </p>
+                <p><span class="funfact">FUN FACT!</span> The central region of Australia is largely uninhabitable due to receiving less than 500 mm of rain annually.</p>
+            </div>
+            </div>
+        <div class="insights-side-by-side">
             <div class="insights-card">
-                <h3>Web Development</h3>
-                <p>We create responsive and modern websites tailored to your needs.</p>
+                <h4>Crash Count by Remoteness</h4>
+                <p>In general, the <b>less remote</b> an area is, the <b>higher</b> the number of crashes. Exercise extra caution when driving on busy roads!</p>
+                <div id="remoteness"></div>
             </div>
             <div class="insights-card">
-                <h3>Graphic Design</h3>
-                <p>Our design team delivers stunning visuals for your brand.</p>
-            </div>
-            <div class="insights-card">
-                <h3>SEO Optimization</h3>
-                <p>Boost your website traffic and rankings with our expert SEO services.</p>
+                <h4>Speed Limit and Crash Incidence</h4>
+                <p>The lower the speed limit, the fewer crashes—indicated by smaller bubbles. Be cautious when driving, as higher speeds increase stopping distance!
+                </p>
+                <div id="speed"></div>
             </div>
         </div>
     </section>
 
+
+
+    <section class="insights" id="insights">
+        <h3>Temporal Patterns and Holiday Periods</h3>
+        <div class="insights-card">
+            <h4>Crash Trend per State (LGA)</h4>
+            <p>The trend for every state from 2019-2023 seems steady. There are some fluctuations
+                in certain date, which might be cause due to holiday seasons.
+            </p>
+            <div id="trend"></div>
+        </div>
+
+        <div class="insights-side-by-side">
+            <div class="insights-card">
+                <h4>Time of Day</h4>
+                <p>Be cautious while driving, especially during <span class="highlight">weekends</span>!</p>
+                <div id="time"></div>
+            </div>
+            <div class="insights-card">
+                <h4>Holiday Period</h4>
+                <p>We create responsive and modern websites tailored to your needs.</p>
+                <div id="holiday"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+     <!-- behaviour Section -->
+     <section class="behaviour" id="behaviour">
+        <h3>Vehicle, Safety, and Demographics Factors</h3>
+        <div class="behaviour-card">
+            <div class="behaviour-card">
+                <h4>Vehicle Type: Hospitalized vs Death</h4>
+                <p>We create responsive and modern websites tailored to your needs.</p>
+                <div id="condition"></div>
+            </div>
+            <div class="behaviour-card">
+                <h4>Heavy Load or Bus Involvement</h4>
+                <p>We create responsive and modern websites tailored to your needs.</p>
+                <div id="heavybus"></div>
+            </div>
+            <div class="behaviour-card">
+                <h4>Gender and Age Group</h4>
+                <p>We create responsive and modern websites tailored to your needs.</p>
+                <div id="genderage"></div>
+            </div>
+        <div class="behaviour-side-by-side">
+            <div class="behaviour-card">
+                <h4>Safety belt usage</h4>
+                <p>We create responsive and modern websites tailored to your needs.</p>
+                <div id="safety"></div>
+            </div>
+            <div class="behaviour-card">
+                <h4>Alcohol Consumption</h4>
+                <p>We create responsive and modern websites tailored to your needs.</p>
+                <div id="alcohol"></div>
+            </div>
+        </div>
+        <div class="behaviour-card">
+            <h4>License Validity</h4>
+            <p>We create responsive and modern websites tailored to your needs.</p>
+            <div id="license"></div>
+        </div>
+        
+        
+    </section>
+
+    </div>
     <!-- Footer Section -->
-    <footer class="footer">
-        <p> Author: Cindy Patricia | Date: 15 October 2024</p>
-    </footer>
+    <section class="footer" id="footer">
+        <footer class="footer">
+            <p> Author: Cindy Patricia | Date: 15 October 2024</p>
+        </footer>
+    </section>
 
     <script type="text/javascript">
         vegaEmbed('#state', 'state.json').then(function(result) {
+            // Do something if needed with the result
+        }).catch(console.error);
+
+        vegaEmbed('#LGA', 'lga.json').then(function(result) {
+            // Do something if needed with the result
+        }).catch(console.error);
+
+    
+        vegaEmbed('#remoteness', 'remoteness.json').then(function(result) {
+            // Do something if needed with the result
+        }).catch(console.error);
+
+        vegaEmbed('#speed', 'speed.json').then(function(result) {
+            // Do something if needed with the result
+        }).catch(console.error);
+
+        vegaEmbed('#trend', 'trend.json').then(function(result) {
+            // Do something if needed with the result
+        }).catch(console.error);
+
+        vegaEmbed('#time', 'time.json').then(function(result) {
+            // Do something if needed with the result
+        }).catch(console.error);
+
+        vegaEmbed('#holiday', 'easterchristmas.json').then(function(result) {
+            // Do something if needed with the result
+        }).catch(console.error);
+
+        vegaEmbed('#condition', 'condition.json').then(function(result) {
+            // Do something if needed with the result
+        }).catch(console.error);
+
+        vegaEmbed('#heavybus', 'heavybus.json').then(function(result) {
+            // Do something if needed with the result
+        }).catch(console.error);
+
+        vegaEmbed('#genderage', 'genderage.json').then(function(result) {
+            // Do something if needed with the result
+        }).catch(console.error);
+
+        vegaEmbed('#safety', 'safety.json').then(function(result) {
+            // Do something if needed with the result
+        }).catch(console.error);
+
+        vegaEmbed('#alcohol', 'alcohol.json').then(function(result) {
+            // Do something if needed with the result
+        }).catch(console.error);
+
+        vegaEmbed('#license', 'license.json').then(function(result) {
             // Do something if needed with the result
         }).catch(console.error);
     </script>
 
 </body>
 </html>
-
-
-
-

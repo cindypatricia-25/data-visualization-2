@@ -8,6 +8,7 @@
         {"License": "Unknown", "CrashCount": 129}
       ]
     },
+    "background": "#fafafa",
     "mark": {"type": "arc", "innerRadius": 50},
     "encoding": {
       "theta": {"field": "CrashCount", "type": "quantitative"},
@@ -16,7 +17,7 @@
         "type": "nominal",
         "scale": {
           "domain": ["All operators valid license", "Any operators with invalid license", "Unknown"],
-          "range": ["#a4dcec", "#ecb5a4", "#868c8e"]  
+          "range": ["#8e725a", "#c7b2a4", "#3d635f"]  
         }
       },
       "tooltip": [{"field": "License"}, {"field": "CrashCount"}]

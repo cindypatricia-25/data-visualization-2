@@ -38,6 +38,9 @@
         {"STATE_NAME": "Western Australia", "Remoteness": "Very Remote Australia", "CountCrash": 51}
       ]
     },
+    "background": "#fafafa",
+    "width": 300,
+    "height": 200,
     "mark": "rect",
     "encoding": {
       "x": {
@@ -53,7 +56,7 @@
       "color": {
         "field": "CountCrash",
         "type": "quantitative",
-        "scale": {"scheme": "yellowgreenblue"},
+        "scale": {"scheme": "lightgreyteal"},
         "legend": {"title": "Crash Count"}
       },
       "tooltip": [

@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 700,
+    "width": 850,
     "height": 500,
-    "background": "#f7f7f7",
+    "background": "#fafafa",
     
     "params": [
       {
@@ -68,7 +68,7 @@
             "type": "quantitative",
             "scale": {
               "type": "log",
-              "scheme": "lighttealblue"
+              "scheme": "purpleblue"
             },
             "legend": {
               "title": "Crash Count"

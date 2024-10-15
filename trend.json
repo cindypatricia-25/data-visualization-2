@@ -1,89 +1,147 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "data//trend.csv"
-    },
-    "vconcat": [
-      {
-        "width": 480,
-        "mark": {
-          "type": "line",
-            "point": true
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data//trend.csv"
+  },
+  
+  "background": "#fafafa",
+  "vconcat": [
+    {
+      "width": 580,
+      
+      "mark": {
+        "type": "line",
+        "point": true
+      },
+      "params": [
+        {
+          "name": "legendselect",
+          "select": { "type": "point", "fields": ["STATE_NAME"] },
+          "bind": "legend"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "YearMonth",
+          "type": "temporal",
+          "axis": { "title": "Year-Month" },
+          "scale": { "domain": { "param": "brush" } }
         },
-        "params": [{
-    "name": "legendselect",
-    "select": {"type": "point", "fields": ["STATE_NAME"]},
-    "bind": "legend"
-  }],
-        "encoding": {
-          "x": {
-            "field": "YearMonth",
-            "type": "temporal",
-            "axis": {"title": "Year-Month"},
-            "scale": {"domain": {"param": "brush"}}
-          },
-          "y": {
-            "field": "Count_of_Crash",
-            "type": "quantitative",
-            "title": "Crash Count"
-          },
-          "color": {
-            "field": "STATE_NAME",
-            "type": "nominal",
-            "title": "State",
-            "legend": {"title": "State"} 
-          },
-          "opacity": {
-      "condition": {"param": "legendselect", "value": 1},
-      "value": 0.2
-    }
+        "y": {
+          "field": "Count_of_Crash",
+          "type": "quantitative",
+          "title": "Crash Count"
         },
-        "transform": [
-          {
-            "calculate": "toDate(datum.Year + '-' + datum.Month + '-01')",
-            "as": "YearMonth"
-          }
+        "color": {
+          "field": "STATE_NAME",
+          "type": "nominal",
+          "title": "State",
+          "scale": {
+            "domain": [
+              "New South Wales",
+              "Victoria",
+              "Queensland",
+              "Western Australia",
+              "South Australia",
+              "Tasmania",
+              "Northern Territory",
+              "Australian Capital Territory"
+            ],
+            "range": [
+              "#287973",  
+              "#6e301d",  
+              "#c8a584",  
+              "#9a9ab0", 
+              "#ccd5ec",  
+              "#ffb360",  
+              "#6bb9e2",  
+              "#6d6554"
+            ]
+          },
+          "legend": { "title": "State" }
+        },
+        "opacity": {
+          "condition": { "param": "legendselect", "value": 1 },
+          "value": 0.2
+        },
+        "tooltip": [
+          { "field": "STATE_NAME", "type": "nominal", "title": "State" },
+          { "field": "YearMonth", "type": "temporal", "title": "Date" },
+          { "field": "Count_of_Crash", "type": "quantitative", "title": "Crash Count" }
         ]
       },
-      {
-        "width": 480,
-        "height": 60,
-        "mark": "line",
-        "params": [
-          {
-            "name": "brush",
-            "select": {"type": "interval", "encodings": ["x"]}
-          }
-        ],
-        "encoding": {
-          "x": {
-            "field": "YearMonth",
-            "type": "temporal",
-            "axis": {"title": "Year-Month"}
-          },
-          "y": {
-            "field": "Count_of_Crash",
-            "type": "quantitative",
-            "axis": {"tickCount": 3, "grid": false},
-            "title": null
-          },
-          "color": {
-            "field": "STATE_NAME",
-            "type": "nominal",
-            "legend": null
-          },
-          "opacity": {
-      "condition": {"param": "legendselect", "value": 1},
-      "value": 0.2
-    }
+      "transform": [
+        {
+          "calculate": "toDate(datum.Year + '-' + datum.Month + '-01')",
+          "as": "YearMonth"
+        }
+      ]
+    },
+    {
+      "width": 500,
+      "height": 100,
+      "mark": "line",
+      "params": [
+        {
+          "name": "brush",
+          "select": { "type": "interval", "encodings": ["x"] }
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "YearMonth",
+          "type": "temporal",
+          "axis": { "title": "Year-Month" }
         },
-        "transform": [
-          {
-            "calculate": "toDate(datum.Year + '-' + datum.Month + '-01')",
-            "as": "YearMonth"
+        "y": {
+          "field": "Count_of_Crash",
+          "type": "quantitative",
+          "axis": { "tickCount": 3, "grid": false },
+          "title": null
+        },
+        "color": {
+          "field": "STATE_NAME",
+          "type": "nominal",
+          "legend": { "title": "State" },
+          "scale": {
+            "domain": [
+              "New South Wales",
+              "Victoria",
+              "Queensland",
+              "Western Australia",
+              "South Australia",
+              "Tasmania",
+              "Northern Territory",
+              "Australian Capital Territory"
+            ],
+            "range": [
+              "#287973",  
+              "#6e301d",  
+              "#c8a584",  
+              "#9a9ab0", 
+              "#ccd5ec",  
+              "#ffb360",  
+              "#6bb9e2",  
+              "#6d6554"
+            ]
           }
+        },
+        "opacity": {
+          "condition": { "param": "legendselect", "value": 1 },
+          "value": 0.2
+        },
+        "tooltip": [
+          { "field": "STATE_NAME", "type": "nominal", "title": "State" },
+          { "field": "YearMonth", "type": "temporal", "title": "Date" },
+          { "field": "Count_of_Crash", "type": "quantitative", "title": "Crash Count" }
         ]
-      }
-    ]
-  }
-  
+      },
+      "transform": [
+        {
+          "calculate": "toDate(datum.Year + '-' + datum.Month + '-01')",
+          "as": "YearMonth"
+        }
+      ]
+    }
+  ]
+}
