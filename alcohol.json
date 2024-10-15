@@ -3,8 +3,8 @@
     "description": "Pie chart for Alcohol test crash count with custom colors",
     "data": {
       "values": [
-        {"Alcohol Test": "Yes", "CrashCount": 137},
-        {"Alcohol Test": "No", "CrashCount": 595}
+        {"Alcohol Test": "Passed", "CrashCount": 137},
+        {"Alcohol Test": "Do Not Passed", "CrashCount": 595}
       ]
     },
     "background": "#fafafa",
@@ -15,7 +15,7 @@
         "field": "Alcohol Test", 
         "type": "nominal",
         "scale": {
-          "domain": ["Yes", "No"],
+          "domain": ["Passed", "Do Not Passed"],
           "range": ["#5e2917", "#f5a75b"]  
         }
       },

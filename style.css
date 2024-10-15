@@ -79,6 +79,8 @@ a {
 .insights {
     padding: 60px;
     background-color: #a9bfc9;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .insights h3 {
@@ -93,7 +95,7 @@ a {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    margin-bottom: 60px; /* Adds space between groups */
+    margin-bottom: 30px; /* Adds space between groups */
 }
 
 .insights-card {
@@ -119,6 +121,7 @@ a {
 .insights-card p {
     line-height: 2;
     color: #666;
+    font-size: 1.2rem;
 }
 
 /* Behaviour Section */
@@ -139,7 +142,7 @@ a {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    margin-bottom: 60px; /* Adds space between groups */
+    margin-bottom: 30px; /* Adds space between groups */
 }
 
 .behaviour-card {
@@ -165,6 +168,7 @@ a {
 .behaviour-card p {
     line-height: 2;
     color: #666;
+    font-size: 1.2rem;
 }
 
 /* Footer */
@@ -176,7 +180,7 @@ a {
 }
 
 .footer p {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 /* Responsive */
@@ -265,4 +269,14 @@ a {
 
 .highlight {
     color: red;
+}
+.highlight-text {
+    font-size: 1rem; /* Large size */
+    font-weight: bold;
+    background: linear-gradient(to right, #f39c12, #f1c40f); /* Yellow-orange gradient */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block; /* Ensures it wraps properly */
+    margin-right: 5px; /* Space between the highlighted text and the following content */
 }

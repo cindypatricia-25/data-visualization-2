@@ -7,7 +7,8 @@
   "background": "#fafafa",
   "vconcat": [
     {
-      "width": 580,
+      "width": 800,  
+      "height": 400, 
       
       "mark": {
         "type": "line",
@@ -78,8 +79,8 @@
       ]
     },
     {
-      "width": 500,
-      "height": 100,
+      "width": 800,  
+      "height": 150, 
       "mark": "line",
       "params": [
         {
