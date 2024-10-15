@@ -28,7 +28,7 @@
     <!-- State Section -->
     <section class="statesection" id="main">
         <div class="content">
-            <h2>Road Crashes and Safety Insights Across Australia</h2>
+            <h2>Road Crashes and Safety Insights Across <span style="color: #84a7ff;">Australia</span></h2>
             <p>Using data from the <u><a href="https://www.bitre.gov.au/publications/ongoing/road_deaths_australia_monthly_bulletins">Australian Government, Department of Infrastructure, Transport, Regional Development, Communications and the Arts</a></u>, spanning from 2019 to 2023, we have created meaningful visualizations to highlight road safety across Australia. The visualization particularly emphasizes the higher number of road crashes in New South Wales compared to other states, showcasing the importance of addressing safety measures in this region.</p>
         </div>
 
@@ -38,7 +38,7 @@
 
     <!-- Insights Section -->
     <section class="insights" id="insights">
-        <h3>Geographic and Environmental Insights</h3>
+        <h3><span style="color: #9a5e2e;">Geographic</span> and <span style="color: #386742;">Environmental</span> Insights</h3>
         <div class="LGA-card">
             <div id="LGA"></div> <!-- LGA map on the left -->
             <div class="LGA-text"> <!-- Text on the right -->
@@ -53,7 +53,7 @@
                 <p><span class="funfact">FUN FACT!</span> The central region of Australia is largely uninhabitable due to receiving less than 500 mm of rain annually.</p>
             </div>
             </div>
-        <div class="insights-side-by-side">
+        <div class="insights-side-by-side" >
             <div class="insights-card">
                 <h4>Crash Count by Remoteness</h4>
                 <p>In general, the <b>less remote</b> an area is, the <b>higher</b> the number of crashes. Exercise extra caution when driving on busy roads!</p>
@@ -67,9 +67,11 @@
             </div>
         </div>
     </section>
+
+
     <section class="insights" id="insights">
-        <h3>Temporal Patterns and Holiday Periods</h3>
-        <div class="insights-card">
+        <h3><span style="color: #3d7493;">Temporal</span> Patterns and <span style="color: #8a4b76;">Holiday</span> Periods</h3>
+        <div class="insights-card" >
             <h4>Crash Trend per State (LGA)</h4>
             <p>The trend for every state from 2019-2023 seems steady. There are some fluctuations
                 in certain date, which might be cause due to holiday seasons.
@@ -77,23 +79,23 @@
             <div id="trend"></div>
         </div>
 
-        <div class="insights-side-by-side">
-            <div class="insights-card">
+        <div class="insights-side-by-side"style="margin-bottom: 0px;">
+            <div class="insights-card"style="margin-bottom: 0px;">
                 <h4>Time of Day</h4>
                 <p>Be cautious while driving, especially during <b><span style="color: #fc3939;">weekends</span></b>!</p>
                 <div id="time"></div>
             </div>
-            <div class="insights-card">
+            <div class="insights-card"style="margin-bottom: 0px;">
                 <h4>Holiday Period</h4>
-                <p>Even though most of the crash did not happen during the holiday period, still be careful due to large number of commuters! Especially during <b><span style="color: #01a11b; font-size: 15px;">Christmas</span></b></p>
+                <p>Even though most of the crash did not happen during the holiday period, still be careful due to large number of commuters! Especially during <b><span style="color: #01a11b; font-size: 20px;">Christmas</span></b></p>
                 <div id="holiday"></div>
             </div>
         </div>
     </section>
      <!-- behaviour Section -->
-     <section class="behaviour" id="behaviour">
-        <h3><span style="color: #442a13;">Vehicle</span>, <span style="color: #59b881;">Safety</span>, and <span style="color: #65accf;">Demographics</span> Factors</h3>
-        <div class="behaviour-card">
+     <section class="behaviour" id="behaviour" >
+        <h3><span style="color: #7a502b;">Vehicle</span>, <span style="color: #b85959;">Safety</span>, and <span style="color: #3d81a3;">Demographics</span> Factors</h3>
+        <div class="behaviour-card"style="margin-top: 0px;">
             <h4>Gender and Age Group</h4>
             <p><span style="color: #396afc;">Male</span> have higher Crash count compared to <span style="color: #d14d8d;">Female</span></p>
             <p>People that age <b>40 years old to 60 years old</b>, also have higher Crash Count compared to others age group.</p>
@@ -127,12 +129,29 @@
                 <div id="alcohol"></div>
             </div>
         </div>
+        <div class="behaviour-side-by-side">
+
         <div class="behaviour-card">
             <h4>License Validity</h4>
             <p>Approximately 30% Road Crash victim does not have their valid license.</p>
             <p><strong>A well-trained driver is a safer driver!</strong></p>
             <div id="license"></div>
         </div>
+
+        
+        <div class="recommend-card">
+            <p style="font-size: 1.8rem; line-height: 1.6;">
+                <strong><span style="color: #ffcccb;">Safety</span> should always be your top priority on the road!</strong> 
+                Always wear your <span style="color: #add8e6;">seatbelt</span> or helmet, follow the speed limits, and never drive distracted. 
+                Remember, even a small mistake can lead to major consequences. 
+                <span style="color: #f1c40f; font-weight: bold;">Stay alert, stay safe, and protect yourself and others on the road.</span>
+                Don’t forget—driving responsibly is the best way to ensure you reach your destination safely.
+            </p>
+            
+        </div>
+        </div>
+
+        
         
         
     </section>

@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #a9bfc9 ;
+    background-color: #d0d0d0 ;
     color:#333;
 }
 
@@ -78,7 +78,7 @@ a {
 /* Insights Section */
 .insights {
     padding: 60px;
-    background-color: #a9bfc9;
+    background-color: #d0d0d0;
     padding-bottom: 30px;
     margin-bottom: 20px;
 }
@@ -95,7 +95,7 @@ a {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    margin-bottom: 30px; /* Adds space between groups */
+    margin-bottom: 0px; /* Adds space between groups */
 }
 
 .insights-card {
@@ -127,7 +127,7 @@ a {
 /* Behaviour Section */
 .behaviour {
     padding: 60px;
-    background-color: #a9bfc9;
+    background-color: #d0d0d0;
 }
 
 .behaviour h3 {
@@ -279,4 +279,42 @@ a {
     border-radius: 5px;
     display: inline-block; /* Ensures it wraps properly */
     margin-right: 5px; /* Space between the highlighted text and the following content */
+}
+
+
+.recommend-card {
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s;
+    margin-bottom: 40px;
+}
+
+.recommend-card:hover {
+    transform: translateY(-10px);
+}
+
+.recommend-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+
+}
+
+.recommend-card p {
+    line-height: 2;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+.recommend-card {
+    position: relative;
+    padding: 20px;
+    background-color: rgb(111, 97, 78);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 10px solid rgb(86, 137, 182); /* This creates the orange line */
+    margin: 20px 0;
 }
