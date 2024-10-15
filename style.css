@@ -215,7 +215,7 @@ a {
 
 .LGA-card {
     flex: 1 1 calc(33.333% - 20px); /* Responsive width with space between */
-    margin: 10px;
+    margin: 30px;
     box-sizing: border-box;
 }
 
@@ -325,3 +325,5 @@ a {
     border-left: 10px solid rgb(86, 137, 182); /* This creates the orange line */
     margin: 20px 0;
 }
+
+
