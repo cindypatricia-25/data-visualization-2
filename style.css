@@ -202,6 +202,7 @@ a {
 /* LGA Card specific styling */
 .LGA-card {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: #fafafa;
@@ -210,6 +211,12 @@ a {
     padding: 30px;
     margin-bottom: 40px; /* Space between the LGA card and the next section */
     transition: transform 0.3s;
+}
+
+.LGA-card {
+    flex: 1 1 calc(33.333% - 20px); /* Responsive width with space between */
+    margin: 10px;
+    box-sizing: border-box;
 }
 
 .LGA-card:hover {
