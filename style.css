@@ -5,6 +5,7 @@
     font-family: 'Arial', sans-serif;
 }
 
+
 body {
     background-color: #d0d0d0 ;
     color:#333;
@@ -27,6 +28,12 @@ a {
 
 .navbar h1 {
     font-size: 1.8rem;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 }
 
 .navbar ul {
@@ -43,6 +50,12 @@ a {
     font-weight: bold;
     padding: 8px 12px;
     transition: background-color 0.3s;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 }
 
 .navbar ul li a:hover {
@@ -67,12 +80,24 @@ a {
 .statesection h2 {
     font-size: 3rem;
     margin-bottom: 20px;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 }
 
 .statesection p {
     font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 30px;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 }
 
 /* Insights Section */
@@ -88,6 +113,12 @@ a {
     margin-bottom: 40px;
     font-size: 2.5rem;
     color: #333;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 }
 
 /* Insights cards for "Remoteness" and "Speed Limit" */
@@ -116,12 +147,24 @@ a {
 .insights-card h4 {
     font-size: 1.5rem;
     margin-bottom: 15px;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 }
 
 .insights-card p {
     line-height: 2;
     color: #666;
     font-size: 1.2rem;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 }
 
 /* Behaviour Section */
@@ -135,6 +178,13 @@ a {
     margin-bottom: 40px;
     font-size: 2.5rem;
     color: #333;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+
 }
 
 /* Insights cards for "Remoteness" and "Speed Limit" */
@@ -163,12 +213,24 @@ a {
 .behaviour-card h4 {
     font-size: 1.5rem;
     margin-bottom: 15px;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 }
 
 .behaviour-card p {
     line-height: 2;
     color: #666;
     font-size: 1.2rem;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 }
 
 /* Footer */
@@ -181,6 +243,12 @@ a {
 
 .footer p {
     font-size: 1.2rem;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 }
 
 /* Responsive */

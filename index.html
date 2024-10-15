@@ -11,6 +11,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -42,7 +45,7 @@
         <div class="LGA-card">
             <div id="LGA"></div> <!-- LGA map on the left -->
             <div class="LGA-text"> <!-- Text on the right -->
-                <h4>Crash by Local Government Area (LGA)</h4>
+                <h3>Crash by Local Government Area (LGA)</h3>
                 <p>This map illustrates the distribution of road crashes across Australia at the Local Government Area (LGA) level. 
                     Each region is color-coded based on the number of reported crashes, with darker shades representing higher crash counts. 
                     The white areas on the map indicate LGAs where no road crashes were detected during the period of analysis. 
@@ -60,7 +63,7 @@
                 <div id="remoteness"></div>
             </div>
             <div class="insights-card">
-                <h4>Speed Limit and Crash Incidence</h4>
+                <h4>🚦Speed Limit and Crash Incidence</h4>
                 <p>The lower the speed limit, the fewer crashes—indicated by smaller bubbles. Be cautious when driving, as higher speeds increase stopping distance!
                 </p>
                 <div id="speed"></div>
@@ -82,12 +85,12 @@
 
         <div class="insights-side-by-side"style="margin-bottom: 0px;">
             <div class="insights-card"style="margin-bottom: 0px;">
-                <h4>Time of Day</h4>
+                <h4>Time of Day☀️</h4>
                 <p>Be cautious while driving, especially during <b><span style="color: #fc3939;">weekends</span></b>!</p>
                 <div id="time"></div>
             </div>
             <div class="insights-card"style="margin-bottom: 0px;">
-                <h4>Holiday Period</h4>
+                <h4>🐣Holiday Period🎄</h4>
                 <p>Even though most of the crash did not happen during the holiday period, still be careful due to large number of commuters! Especially during <b><span style="color: #01a11b; font-size: 20px;">Christmas</span></b></p>
                 <div id="holiday"></div>
             </div>
@@ -97,7 +100,7 @@
      <section class="behaviour" id="behaviour" >
         <h3><span style="color: #7a502b;">Vehicle</span>, <span style="color: #b85959;">Safety</span>, and <span style="color: #3d81a3;">Demographics</span> Factors</h3>
         <div class="behaviour-card"style="margin-top: 0px;">
-            <h4>Gender and Age Group</h4>
+            <h4>⚥Gender and Age Group</h4>
             <p><span style="color: #396afc;">Male</span> have higher Crash count compared to <span style="color: #d14d8d;">Female</span></p>
             <p>People that age <b>40 years old to 60 years old</b>, also have higher Crash Count compared to others age group.</p>
             <div id="genderage"></div>
@@ -110,21 +113,21 @@
                 <div id="condition"></div>
             </div>
         <div class="behaviour-card">
-            <h4>Heavy Load or Bus Involvement</h4>
+            <h4>Heavy Load🚚 or Bus🚌 Involvement</h4>
             <p><b><span style="color: #fc3939; font-size: 20px;">BE CAREFUL</span></b> when you near <b><span style="color: #fc9139;">Bus</span></b> or <b><span style="color: #fc9139;">Heavy Truck</span></b></p>
             <div id="heavybus"></div>
         </div>
         </div>
         <div class="behaviour-side-by-side">
             <div class="behaviour-card">
-                <h4>Safety belt usage</h4>
+                <h4>Safety⛑️ belt usage</h4>
                 <p><span class="highlight-text">DO YOU KNOW</span> that 6 out of 10 victims in road crashes do not have their safety belt or helmet on?</p>
                     <p><strong>Always wear your safety gear!</strong></p>
                 <div id="safety"></div>
             </div>
             
             <div class="behaviour-card">
-                <h4>Alcohol Consumption</h4>
+                <h4>🍻Alcohol Consumption</h4>
                 <p><span class="highlight-text">DO YOU KNOW</span> that Alcohol is one of the biggest factor in Road Crash accident?</p>
                 <p><strong>Please, be mindful when driving </strong></p>
                 <div id="alcohol"></div>
@@ -133,7 +136,7 @@
         <div class="behaviour-side-by-side">
 
         <div class="behaviour-card">
-            <h4>License Validity</h4>
+            <h4>🪪License Validity</h4>
             <p>Approximately 30% Road Crash victim does not have their valid license.</p>
             <p><strong>A well-trained driver is a safer driver!</strong></p>
             <div id="license"></div>
@@ -141,7 +144,7 @@
 
         
         <div class="recommend-card">
-            <p style="font-size: 1.8rem; line-height: 1.6;">
+            <p style="font-size: 1.4rem; line-height: 1.6;">
                 <span style="font-size: 2rem;">🚨</span>
                 <strong><span style="color: #ffcccb;">Safety </span> should always be your top priority on the road!</strong> 
                 Always wear your <span style="color: #add8e6;">seatbelt</span> or helmet, follow the speed limits, and never drive distracted. 
